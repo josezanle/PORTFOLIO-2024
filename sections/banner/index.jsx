@@ -33,7 +33,7 @@ const Banner = () => {
                 </div>
                 <Divider />
             </div>
-            
+
             <style jsx>{`
                 .banner__container{
                     width: 100%;
@@ -45,34 +45,36 @@ const Banner = () => {
                 .banner__container .me{
                     font-size: 50px;
                     font-weight: bold;
-                    position: absolute;
-                    top: .5em;
-                    left: .5em;
-                    z-index: 100;
+                    padding-left: .5em;
                 }
                 
                 .banner__container .content{
                     width: 100%;
-                    height: 100vh;
+                    min-height: 100vh;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    background: transparent;
+                    padding: 0 1em;
+                    gap: 1em;
                 }
                 .banner__container .content .left__image{
                     width: 200px;
                     height: 380px
                 }
-                .banner__container .content .right__text{
-                    padding: 1em;
-                }
+                
                 .banner__container .content .right__text .main{
                     font-size: 32px;
-                    LINE-HEIGHT: 1EM;
+                    line-height: 1em;
                 }
                 .banner__container .content .right__text .self__intro{
                     width: 200px;
                     font-size: 18px;
                     font-style: italic;
+                }
+                @media(max-width: 1024px ){
+                    .banner__container .content{ flex-wrap: wrap}
+                    .banner__container{ min-height: 120vh}
                 }
 
             `}</style>

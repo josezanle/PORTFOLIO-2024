@@ -10,13 +10,12 @@ export const Divider = () => {
         
         <style jsx>{`
             .divider__container{
-                width: 400px;
-                height: 400px;
+                width: 416px;
+                min-height: 400px;
                 display: grid;
                 grid-template-columns: repeat(5, 1fr);
                 grid-template-rows: repeat(3, 1fr);
                 gap: 1em;
-                padding: 1em;
             }
 
             .div1 { 

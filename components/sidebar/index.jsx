@@ -177,6 +177,7 @@ const Sidebar = () => {
           text-transform: uppercase;
           font-weight: bold;
         }
+        @media(max-width: 820px ){.sidebar{ display: none}}
       `}</style>
     </div>
   );

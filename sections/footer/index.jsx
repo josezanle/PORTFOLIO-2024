@@ -164,7 +164,7 @@ const Footer = () => {
         }
 
         @media (max-width: 450px) {
-          .footer__content .columns__container .box__footer {width: 100%}
+          .footer__content .columns__container .box__footer {width: 100%; background: pink}
           .footer__content .columns__container .box__footer .logo__name {font-size: 30px}
         }
 

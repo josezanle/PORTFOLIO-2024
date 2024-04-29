@@ -49,6 +49,7 @@ export default function Home() {
         }
         .main__container .left__content{
           width: calc( 100% - 350px);
+          min-height: 100vh;
         }
         .main__container .arrow__button{
           position: fixed;
@@ -63,6 +64,8 @@ export default function Home() {
         .main__container .arrow__button:hover{background: hsla(0, 0%, 11%, 0.9)}
         .main__container .arrow__button.top{bottom: 60px}
         .main__container .arrow__button.bottom{bottom: 1em}
+
+        @media( max-width: 820px ){ .main__container .left__content{ width: 100%}}
 
       `}
 
