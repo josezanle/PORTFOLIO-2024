@@ -57,6 +57,22 @@ const Sidebar = () => {
   }
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const onEmailSend = () => {
+
+    const recipient = 'jose.rios.lm@gmail.com';
+    const subject = 'Consulta desde portfolio web';
+    const body = 'Hola, me gustaria entrevistarte para una posición en la empresa...';
+
+    // Abre el cliente de correo con los detalles predefinidos
+    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+  const onResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = 'resume_rios_jose_2024.pdf';
+    link.download = 'resume_rios_jose_2024.pdf';
+    link.click(); 
+  }
+
 
   return (
     <div className="sidebar">
@@ -68,7 +84,15 @@ const Sidebar = () => {
             onMouseLeave={() => handleMouseLeave(name)}
             onClick={name === 'menu' ? () => toggleMenu() : () => { }}
           >
-            <Icon name={name} fill={fillColor[name]} size={27} />
+            <Icon
+              name={name}
+              fill={fillColor[name]}
+              size={27}
+              onClick={
+                name === "sms" ? onEmailSend
+                  : name === "resume" ? onResumeDownload
+                    : () => { }}
+            />
             {hoveredIcon === name && name !== "menu" && <Tooltip message={iconMessages[name]} />}
           </div>
         ))}

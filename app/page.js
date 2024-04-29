@@ -8,10 +8,11 @@ import Footer from '@/sections/footer';
 import Slide from '@/sections/slide';
 import Sidebar from '@/components/sidebar';
 import { Icon } from '@/components/icons';
+import Phrase from '@/sections/phrase';
 
 export default function Home() {
   // por cada component, que se agrega, se añade un useRef= null, para mapear, y scrollear a travez del index.
-  const components = [<Banner />, <About />, <Slide />, <Footer />];
+  const components = [<Banner />, <Phrase />, <About />, <Slide />, <Footer />];
   const refs = components.map(() => useRef(null));
   const [currentSection, setCurrentSection] = useState(0);
 
@@ -33,8 +34,8 @@ export default function Home() {
 
   return (
     <main className="main__container">
-      <button className='arrow__button top' onClick={handleScrollUp}><Icon name='arrow-short-up'/></button>
-      <button className='arrow__button bottom' onClick={handleScrollDown}><Icon name='arrow-short-down'/></button>
+      <button className='arrow__button top' onClick={handleScrollUp}><Icon name='arrow-short-up' /></button>
+      <button className='arrow__button bottom' onClick={handleScrollDown}><Icon name='arrow-short-down' /></button>
       <div className='left__content'>
         {components.map((Component, index) => <div ref={refs[index]} key={index}>{Component}</div>)}
       </div>

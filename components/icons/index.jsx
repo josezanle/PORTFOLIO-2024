@@ -9,6 +9,7 @@ import { ArrowShortUp } from './arrowShortUp'
 import { Star } from './star'
 import { Menu } from './menu'
 import { Resume } from './resume'
+import { Medical } from './medical'
 
 export const Icon = ({ name = "applause", size = 20, fill = "silver", onClick = () => { } }) => {
     switch (name) {
@@ -26,6 +27,9 @@ export const Icon = ({ name = "applause", size = 20, fill = "silver", onClick = 
 
         case "menu":
             return <Menu size={size} fill={fill} onClick={onClick} />
+
+        case "medical":
+            return <Medical size={size} fill={fill} onClick={onClick} />
 
         case "sms":
             return <Sms size={size} fill={fill} onClick={onClick} />

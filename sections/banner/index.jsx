@@ -7,6 +7,7 @@ const bannerUrl = "https://images.pexels.com/photos/2693212/pexels-photo-2693212
 const Banner = () => {
     return (
         <div className='banner__container'>
+            <h1 className='me'>Jose.</h1>
             <div className="content">
                 <img className='left__image' src={urlImage} alt="" />
                 <div className="right__text">
@@ -32,6 +33,7 @@ const Banner = () => {
                 </div>
                 <Divider />
             </div>
+            
             <style jsx>{`
                 .banner__container{
                     width: 100%;
@@ -40,7 +42,15 @@ const Banner = () => {
                     display: flex;
                     flex-flow: column;
                 }
-
+                .banner__container .me{
+                    font-size: 50px;
+                    font-weight: bold;
+                    position: absolute;
+                    top: .5em;
+                    left: .5em;
+                    z-index: 100;
+                }
+                
                 .banner__container .content{
                     width: 100%;
                     height: 100vh;
