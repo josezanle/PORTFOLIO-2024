@@ -33,7 +33,6 @@ const Card = ({ children }) => {
             .card{
                 width: 300px;
                 height: 600px;
-                background: pink
             }`}</style>
       </div>
     );
