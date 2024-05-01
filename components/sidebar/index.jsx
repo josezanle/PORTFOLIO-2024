@@ -87,7 +87,7 @@ const Sidebar = () => {
             <Icon
               name={name}
               fill={fillColor[name]}
-              size={27}
+              size={40}
               onClick={
                 name === "sms" ? onEmailSend
                   : name === "resume" ? onResumeDownload

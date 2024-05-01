@@ -65,7 +65,7 @@ const Footer = () => {
           align-items: center;
           justify-content: center;
           color: white;
-          background-color: #ff445a;
+          background-color: #1c1c1c;
         }
         .footer__content .contact__us {
           font-size: 40px;
@@ -74,8 +74,9 @@ const Footer = () => {
           display: contents;
         }
         .footer__content .contact__email {
-          font-size: 100px;
+          font-size: 95px;
           font-weight: bold;
+          color: #9bd07d
         }
         .footer__content .start__project__button {
           padding: 1em .5em;
@@ -113,10 +114,11 @@ const Footer = () => {
           display: flex;
           flex-direction: column;
         }
-        .footer__content .columns__container .box__footer .logo__name {font-size: 45px}
+        .footer__content .columns__container .box__footer .logo__name {font-size: 45px; color: #9bd07d}
         .footer__content .columns__container .box__footer .localization ,
         .footer__content .columns__container .box__footer .social {
           font-size: 35px;
+          color: #9bd07d;
         }
 
         .footer__content .columns__container .box__footer .terms {
@@ -164,7 +166,7 @@ const Footer = () => {
         }
 
         @media (max-width: 450px) {
-          .footer__content .columns__container .box__footer {width: 100%; background: pink}
+          .footer__content .columns__container .box__footer {width: 100%}
           .footer__content .columns__container .box__footer .logo__name {font-size: 30px}
         }
 

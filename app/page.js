@@ -53,7 +53,7 @@ export default function Home() {
         }
         .main__container .arrow__button{
           position: fixed;
-          left: 1em;
+          right: 1em;
           width: 60px;
           height: 60px;
           background: #1c1c1c;

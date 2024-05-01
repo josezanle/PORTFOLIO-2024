@@ -1,5 +1,6 @@
-import { Divider } from '@/components/divider'
 import React from 'react'
+import { Divider } from '@/components/divider'
+import { Icon } from '@/components/icons'
 
 const urlImage = "https://res.cloudinary.com/dubv6xkxf/image/upload/c_thumb,e_improve,f_webp,g_auto,h_600,q_100,w_300/v1714270235/d4siymt0il2dfm5hyihc.jpg"
 const bannerUrl = "https://images.pexels.com/photos/2693212/pexels-photo-2693212.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -7,11 +8,15 @@ const bannerUrl = "https://images.pexels.com/photos/2693212/pexels-photo-2693212
 const Banner = () => {
     return (
         <div className='banner__container'>
-            <h1 className='me'>Jose.</h1>
+            <div className="top__content">
+                <h1 className='me'>Jose.</h1>
+                <Icon name='sun' size={40} />
+            </div>
+
             <div className="content">
                 <img className='left__image' src={urlImage} alt="" />
                 <div className="right__text">
-                    <h6>ME PRESENTO, SOY_____________</h6>
+                    <h6>ME PRESENTO, SOY</h6>
                     <br />
 
                     <b className='main'>Software</b>
@@ -37,15 +42,22 @@ const Banner = () => {
             <style jsx>{`
                 .banner__container{
                     width: 100%;
-                    height: 100vh;
+                    min-height: 100vh;
                     background: hsla(0, 0%, 95%, 0.5);
                     display: flex;
                     flex-flow: column;
+                    padding: 2em 0;
                 }
-                .banner__container .me{
+                .banner__container .top__content{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: .5em 2em;        
+                }
+                .banner__container .top__content .me{
                     font-size: 50px;
                     font-weight: bold;
-                    padding-left: .5em;
+                    line-height: .9em;
                 }
                 
                 .banner__container .content{

@@ -10,6 +10,8 @@ import { Star } from './star'
 import { Menu } from './menu'
 import { Resume } from './resume'
 import { Medical } from './medical'
+import { Sun } from './sun'
+import { Moon } from './Moon'
 
 export const Icon = ({ name = "applause", size = 20, fill = "silver", onClick = () => { } }) => {
     switch (name) {
@@ -31,8 +33,14 @@ export const Icon = ({ name = "applause", size = 20, fill = "silver", onClick = 
         case "medical":
             return <Medical size={size} fill={fill} onClick={onClick} />
 
+        case "moon":
+            return <Moon size={size} fill={fill} onClick={onClick} />
+
         case "sms":
             return <Sms size={size} fill={fill} onClick={onClick} />
+
+        case "sun":
+            return <Sun size={size} fill={fill} onClick={onClick} />
 
         case "resume":
             return <Resume size={size} fill={fill} onClick={onClick} />

@@ -1,6 +1,7 @@
 import { Montserrat } from "next/font/google";
-import {SpeedInsights} from "@vercel/speed-insights/next"
-import "../css/globals.css";
+import "../theme/globals.css";
+import { OnlineStatusProvider } from "@/contexts/providers/ionlineProvider";
+import { ThemeProvider } from "@/contexts/providers/themeProvider";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -17,8 +18,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        {children}
-        <SpeedInsights/>
+        <OnlineStatusProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </OnlineStatusProvider>
       </body>
     </html>
   );
