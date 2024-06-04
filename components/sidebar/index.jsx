@@ -112,10 +112,6 @@ const Sidebar = () => {
           width: 350px;
           height: 100vh;
           background: white;
-          position: fixed;
-          top: 0;
-          right: 0;
-          bottom: 0;
         }
         .sidebar .navigation {
           width: 100%;

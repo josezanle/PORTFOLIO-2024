@@ -23,7 +23,8 @@ const Footer = () => {
             <Br />
             <p className="items">LATAM DEVELOPER</p>
 
-            <h2 className="logo__name"><span className="logo__name">&#x2605;</span> 2024</h2>
+            <h2 className="logo__name">
+              <span className="logo__name">&#x2605;</span> 2024</h2>
           </div>
 
           <Br />
@@ -37,7 +38,7 @@ const Footer = () => {
             <Br />
             <Br />
 
-            <h2 className="localization">Oficinas</h2>
+            <h2 className="localization">Working</h2>
             <p className="items">100% Remoto</p>
             <Br />
             <Br />
@@ -65,13 +66,15 @@ const Footer = () => {
           align-items: center;
           justify-content: center;
           color: white;
-          background-color: #1c1c1c;
+          background: white;
+          padding-top: 3em;
         }
         .footer__content .contact__us {
           font-size: 40px;
           font-weight: 400;
           margin-bottom: .5em;
           display: contents;
+          color: #1c1c1c;
         }
         .footer__content .contact__email {
           font-size: 95px;
@@ -85,22 +88,18 @@ const Footer = () => {
           font-weight: bold;
           border-radius: 2em;
           width: 400px;
-          background: transparent;
-          color: #f0f0f0;
-          border: 1px solid #f0f0f0;
+          background: #9bd07d;
+          color: white;
           cursor: pointer;
           text-align: center;
-        }
-        .footer__content .start__project__button:hover {
-          color: white;
-          border: 1px solid white;
+          text-decoration: none;
         }
 
         .footer__content .footer__divisor {
           width: 1200px;
           height: 1px;
           margin: 6em 0;
-          background: #f0f0f0
+          background: #9bd07d;
         }
 
         .footer__content .columns__container {
@@ -131,6 +130,7 @@ const Footer = () => {
         .footer__content .columns__container .box__footer .items {
           font-weight: 500;
           font-size: 25px;
+          color: #1c1c1c;
         }
 
         .footer__content .columns__container .box__footer a {

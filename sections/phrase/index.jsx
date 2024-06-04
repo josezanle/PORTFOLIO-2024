@@ -16,10 +16,10 @@ const Phrase = () => {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                background: white;
             }
             .container__phrase .content{
                 width: 100%;
-                min-height: 100vh;
                 display: flex;
                 justify-content: center;
             }
@@ -38,24 +38,7 @@ const Phrase = () => {
             .container__phrase .single_text .especial{
                 color: #8beb5c;
             }
-            @media( max-width: 1224px ){ 
-                .container__phrase .content{
-                    flex-flow: column;
-                    align-items: center;
-                    gap: 1em;
-                }
-                .container__phrase .item,
-                .container__phrase .title,
-                .container__phrase .single_text{ width: 50%}
-            }
-            @media( max-width: 600px ){
-                .container__phrase .content{
-                    padding: 0 1em;
-                }
-                .container__phrase .item,
-                .container__phrase .title,
-                .container__phrase .single_text{ width: 100%}
-            }
+            
         `}</style>
         </div>
     )
