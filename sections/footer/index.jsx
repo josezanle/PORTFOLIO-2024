@@ -1,63 +1,63 @@
 import { Br } from "@/components/br";
+import { BLACK } from "../../theme";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="footer__content" id="footer">
+    <footer className="footer__content" id="footer">
 
-        <h2 className="contact__us">Escribeme:</h2>
-        <p className="contact__email">jose.rios.lm@gmail.com</p>
+      <h2 className="contact__us">Escribeme:</h2>
+      <p className="contact__email">jose.rios.lm@gmail.com</p>
 
-        <a 
+      <a
         className="start__project__button"
         href="mailto:studiozanle@gmail.com?subject=Presupuesto para desarrollo web"
-        >Contactar</a>
+      >Contactar</a>
 
-        <hr className="footer__divisor" />
+      <hr className="footer__divisor" />
 
-        <div className="columns__container">
-          <div className="box__footer">
-            <h2 className="logo__name"> Zanle Studio</h2>
-            <Br />
-            <Br />
-            <Br />
-            <p className="items">LATAM DEVELOPER</p>
+      <div className="columns__container">
+        <div className="box__footer">
+          <h2 className="logo__name"> Zanle Studio</h2>
+          <Br />
+          <Br />
+          <Br />
+          <p className="items">LATAM DEVELOPER</p>
 
-            <h2 className="logo__name">
-              <span className="logo__name">&#x2605;</span> 2024</h2>
-          </div>
+          <h2 className="logo__name">
+            <span className="logo__name">&#x2605;</span> 2024</h2>
+        </div>
 
+        <Br />
+        <Br />
+
+        <div className="box__footer">
+          <h2 className="localization">Localización</h2>
+          <Br />
+          <p className="items">Buenos Aires</p>
+          <p className="items">Argentina</p>
           <Br />
           <Br />
 
-          <div className="box__footer">
-            <h2 className="localization">Localización</h2>
-            <Br />
-            <p className="items">Buenos Aires</p>
-            <p className="items">Argentina</p>
-            <Br />
-            <Br />
-
-            <h2 className="localization">Working</h2>
-            <p className="items">100% Remoto</p>
-            <Br />
-            <Br />
-
-          </div>
-
-          <div className="box__footer">
-            <h2 className="social">Social</h2>
-            <Br />
-
-            <p className="items">Facebook</p>
-            <p className="items">Twitter</p>
-            <p className="items">Linkedin</p>
-            <p className="items">Instagram</p>
-          </div>
+          <h2 className="localization">Working</h2>
+          <p className="items">100% Remoto</p>
+          <Br />
+          <Br />
 
         </div>
 
-        <style jsx>{`
+        <div className="box__footer">
+          <h2 className="social">Social</h2>
+          <Br />
+
+          <p className="items">Facebook</p>
+          <p className="items">Twitter</p>
+          <p className="items">Linkedin</p>
+          <p className="items">Instagram</p>
+        </div>
+
+      </div>
+
+      <style jsx>{`
         .footer__content {
           width: 100%;
           min-height: 100vh;
@@ -74,12 +74,12 @@ const Footer = () => {
           font-weight: 400;
           margin-bottom: .5em;
           display: contents;
-          color: #1c1c1c;
+          color: ${BLACK};
         }
         .footer__content .contact__email {
           font-size: 95px;
           font-weight: bold;
-          color: #9bd07d
+          color: ${BLACK}
         }
         .footer__content .start__project__button {
           padding: 1em .5em;
@@ -88,7 +88,7 @@ const Footer = () => {
           font-weight: bold;
           border-radius: 2em;
           width: 400px;
-          background: #9bd07d;
+          background: ${BLACK};
           color: white;
           cursor: pointer;
           text-align: center;
@@ -97,9 +97,9 @@ const Footer = () => {
 
         .footer__content .footer__divisor {
           width: 1200px;
-          height: 1px;
+          height: 2px;
           margin: 6em 0;
-          background: #9bd07d;
+          background: ${BLACK};
         }
 
         .footer__content .columns__container {
@@ -113,11 +113,11 @@ const Footer = () => {
           display: flex;
           flex-direction: column;
         }
-        .footer__content .columns__container .box__footer .logo__name {font-size: 45px; color: #9bd07d}
+        .footer__content .columns__container .box__footer .logo__name {font-size: 45px; color: ${BLACK}}
         .footer__content .columns__container .box__footer .localization ,
         .footer__content .columns__container .box__footer .social {
           font-size: 35px;
-          color: #9bd07d;
+          color: ${BLACK};
         }
 
         .footer__content .columns__container .box__footer .terms {
@@ -171,7 +171,6 @@ const Footer = () => {
         }
 
       `}</style>
-      </div>
     </footer>
   );
 };

@@ -102,11 +102,6 @@ const Sidebar = () => {
         <div className="menu__container">{links?.map((link, i) => <h4 key={i} className="link">{link.name}</h4>)}</div>
       )}
 
-      <div className="content">
-        <p className="rotated__text">Jose Rios</p>
-      </div>
-
-
       <style jsx>{`
         .sidebar {
           width: 350px;
@@ -159,21 +154,6 @@ const Sidebar = () => {
           }
         }
 
-        .sidebar .content {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .sidebar .content .rotated__text {
-          writing-mode: vertical-lr;
-          font-size: 6em;
-          color: ${GREY};
-          text-transform: uppercase;
-          font-weight: bold;
-        }
-        @media(max-width: 820px ){.sidebar{ display: none}}
       `}</style>
     </div>
   );

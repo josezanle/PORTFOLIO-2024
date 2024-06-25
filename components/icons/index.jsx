@@ -12,6 +12,7 @@ import { Resume } from './resume'
 import { Medical } from './medical'
 import { Sun } from './sun'
 import { Moon } from './Moon'
+import { Watch } from './watch'
 
 export const Icon = ({ name = "applause", size = 20, fill = "silver", onClick = () => { } }) => {
     switch (name) {
@@ -20,6 +21,9 @@ export const Icon = ({ name = "applause", size = 20, fill = "silver", onClick = 
 
         case "arrow-short-up":
             return <ArrowShortUp size={size} fill={fill} onClick={onClick} />
+
+        case "watch":
+            return <Watch size={size} fill={fill} onClick={onClick} />
 
         case "arrow-large":
             return <ArrowLong size={size} fill={fill} onClick={onClick} />

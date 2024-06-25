@@ -1,14 +1,16 @@
-import { Icon } from '@/components/icons'
 import React from 'react'
+import { Icon } from '@/components/icons'
+import { BLACK } from '@/theme'
 
 const Phrase = () => {
     return (
         <div className='container__phrase'>
             <span className='content'>
-                <span className='item'><Icon name='medical' size={50} fill='#8beb5c' /></span>
+                <span className='item'><Icon name='medical' size={50} fill={BLACK} /></span>
                 <h3 className='title'>QUIERO QUE SEPAS</h3>
                 <p className='single_text'>El aprecio que tengo, si trabajaste junto a mi, formamos equipo y/o fuiste jefe, ya que todo esto, <b className='especial'>fue gracias a ti.</b></p>
             </span>
+
             <style jsx>{`
             .container__phrase{
                 width: 100%;
@@ -19,24 +21,24 @@ const Phrase = () => {
                 background: white;
             }
             .container__phrase .content{
-                width: 100%;
+                width: 1200px;
                 display: flex;
                 justify-content: center;
             }
-            .container__phrase .item{ width: 30%}
+            .container__phrase .item{ width: 33%;}
 
             .container__phrase .title{
-                width: 30%;
-                font-size: 20px;
-                color: #8beb5c;
+                width: 33%;
+                font-size: 30px;
+                color: ${BLACK};
             }
             .container__phrase .single_text{
-                width: 30%;
+                width: 33%;
                 font-size: 30px;
                 font-weight: 300;
             }
             .container__phrase .single_text .especial{
-                color: #8beb5c;
+                color: ${BLACK};
             }
             
         `}</style>

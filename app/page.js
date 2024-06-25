@@ -2,17 +2,25 @@
 
 import React, { useRef, useState } from 'react';
 
-import About from '@/sections/about';
 import Banner from '@/sections/banner';
-import Footer from '@/sections/footer';
-import Slide from '@/sections/slide';
 import Phrase from '@/sections/phrase';
-
+import About from '@/sections/about';
+import Experience from '@/sections/experience';
+import ZanleSection from '@/sections/zanleStudio';
+import Footer from '@/sections/footer';
 import { Icon } from '@/components/icons';
 
 export default function Home() {
   // por cada component, que se agrega, se añade un useRef= null, para mapear, y scrollear a travez del index.
-  const components = [<Banner />, <Phrase />, <About />, <Slide />, <Footer />];
+  const components = [
+    <Banner />,
+    <Phrase />,
+    <About />,
+    <Experience />,
+    <ZanleSection />,
+    <Footer />
+  ];
+  
   const refs = components.map(() => useRef(null));
   const [currentSection, setCurrentSection] = useState(0);
 

@@ -1,3 +1,6 @@
+export const VIOLET = "#a55eea"
+export const BLACK = "#1c1c1c"
+
 const lightTheme = {
   body: '#FFFFFF',
   text: '#1c1c1c',
