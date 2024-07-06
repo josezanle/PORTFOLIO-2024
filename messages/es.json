@@ -1,0 +1,45 @@
+{
+    "Index": {
+        "navbarLinks": {
+            "home": "Inicio",
+            "experience": "Experiencia",
+            "zanleStudio": "Zanle Studio",
+            "contact": "Contacto"
+        },
+        "banner": {
+            "presentation": "Dejame presentarme, soy un:",
+            "job": "Desarrollador Frontend",
+            "description1": "En pocas palabras, soy desarrollador de interfaces, lógica y bases de datos,",
+            "description2": "Si puedes imaginarlo, puedes crearlo.",
+            "date": "2024, Buenos Aires, Argentina"
+        },
+        "phrase": {
+            "phraseTitle": "Quiero que sepas",
+            "phraseText1": "El aprecio que te tengo, si trabajaste junto a mi, formamos equipo o fuiste mi supervisor, ya que todo esto,",
+            "phraseText2": "fue todo gracias a ti."
+        },
+        "experience": {
+            "experienceTitle": "Experiencia",
+            "boldText1": "Ok,",
+            "text1": "vamos a hablar un poco de mi",
+            "boldText2": "experiencia laboral,",
+            "text2": "en algunas",
+            "boldText3": "STARTUPS."
+        },
+        "today": {
+            "title": "HOY",
+            "text1": "es mi hogar, donde puedo mostrate que además de Frontend, Backend y Bases de datos, tambien, puedo diseñar sitios web, contactar clientes, vender un servicio o asesoria.",
+            "text2": "Para mi, es",
+            "bold1": "una aventura",
+            "text3": ", el mero hecho de poder mostrar a otras personas, mi negocio, es satisfactorio, divertido, porque no?.",
+            "text4": "Antes llamado, Zanle Group, no habia gran diferencia, pero suponia que al sumar a un CTO, de una Startup donde trabajé, tenia la necesidad de rebautizar",
+            "bold2": "mi negocio."
+        },
+        "footer": {
+            "title": "Enviame un email",
+            "button": "Contactar",
+            "localization": "Localización",
+            "remote": "100% Remoto"
+        }
+    }
+}

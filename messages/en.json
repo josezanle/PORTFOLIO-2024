@@ -1,0 +1,49 @@
+{
+    "Index": {
+        "navbarLinks": {
+            "home": "Home",
+            "experience": "Experience",
+            "zanleStudio": "Zanle Studio",
+            "contact": "Contact"
+        },
+        "banner": {
+            "presentation": "Let me introduce myself, I'm a:",
+            "job": "Frontend Developer",
+            "description1": "In short, i am a developer of interfaces, logic, and databases.",
+            "description2": "If you can imagine it, you can create it.",
+            "date": "2024, Buenos Aires, Argentina"
+        },
+        "phrase": {
+            "phraseTitle": "I want you to know",
+            "phraseText1": "The appreciation I have for you, whether we worked together, formed a team, or you were my supervisor,",
+            "phraseText2": "is all thanks to you."
+        },
+
+        "experience": {
+            "experienceTitle": "Experience",
+            "boldText1": "Ok,",
+            "text1": "let's talk about some",
+            "boldText2": "experience working,",
+            "text2": "in some",
+            "boldText3": "STARTUPS."
+        },
+
+        "today": {
+            "title": "TODAY",
+            "text1": "is my home, where I can show you that besides Frontend, Backend, and Databases, I can also design websites, contact clients, sell a service, or provide advice.",
+            "text2": "For me,",
+            "bold1": "it’s an adventure,",
+            "text3": "the mere fact of being able to showcase my business to others is satisfying and fun, why not?",
+            "text4": "Previously known as Zanle Group, there wasn’t a significant difference, but I assumed that by adding a CTO from a startup where I worked, I needed to rename",
+            "bold2": "my business."
+        },
+
+        "footer": {
+            "title": "Send me a email",
+            "button": "Contact",
+            "localization": "Localization",
+            "remote": "100% Remote"
+        }
+
+    }
+}
