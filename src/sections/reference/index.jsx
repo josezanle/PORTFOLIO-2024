@@ -33,6 +33,7 @@ const Reference = () => {
                 align-items: center;
                 background: ${LGBLACK};
                 flex-flow: column;
+                padding-top: 3em;
             }
             .reference__container .section{
                 width: 1200px;
@@ -45,6 +46,8 @@ const Reference = () => {
                 color: ${YELLOW};
                 font-size: 12px;
                 text-transform: uppercase;
+                width: 100%;
+                text-align: center;
             }
             .reference__container .big__letters{
                 font-size: 120px;
@@ -80,15 +83,16 @@ const Reference = () => {
             }
 
             .reference__container .single__text{
-                font-size: 14px;
+                font-size: 16px;
                 color: ${WHITE} ;
-                font-weight: bold;
-                font-weight: 500;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 8px;
             }
 
             @media(max-width: 1200px){.reference__container .section{width: 100%}} 
             @media(max-width: 460px){
-                .reference__container .section{flex-flow: column}
+                .reference__container .section{padding: 0 2em}
                 .reference__container .big__letters{font-size: 80px}
                 .reference__container .big__letters::before{ right: 0px; bottom: -15px}
                 .reference__container .big__letters::after{ bottom: -7px;}

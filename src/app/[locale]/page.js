@@ -4,14 +4,12 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import Banner from '@/sections/banner';
 import Phrase from '@/sections/phrase';
-import About from '@/sections/about';
 import Experience from '@/sections/experience';
 import ZanleSection from '@/sections/zanleStudio';
 import Footer from '@/sections/footer';
 import Reference from '@/sections/reference';
 import CopyRigth from '@/sections/copyrigth';
-import { Icon } from '@/components/icons';
-import { VIOLET, WHITE, YELLOW } from '@/theme';
+import { VIOLET, YELLOW } from '@/theme';
 
 function Body() {
   // por cada component, que se agrega, se añade un useRef= null, para mapear, y scrollear a travez del index.
@@ -26,28 +24,10 @@ function Body() {
   ];
 
   const refs = components.map(() => useRef(null));
-  const [currentSection, setCurrentSection] = useState(0);
-
-  const handleScrollDown = () => {
-    if (currentSection < refs.length - 1) {
-      setCurrentSection(currentSection + 1);
-      refs[currentSection + 1].current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleScrollUp = () => {
-    if (currentSection > 0) {
-      setCurrentSection(currentSection - 1);
-      refs[currentSection - 1].current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <main className="main__container">
       {components?.map((Component, index) => <div ref={refs[index]} key={index}>{Component}</div>)}
-      <button className='arrow__button top' onClick={handleScrollUp}><Icon name='arrow-short-up' fill={WHITE} /></button>
-      <button className='arrow__button bottom' onClick={handleScrollDown}><Icon name='arrow-short-down' fill={WHITE} /></button>
-
       <style jsx>{`
         .main__container{
           width: 100%;
@@ -68,7 +48,7 @@ function Body() {
           z-index: 1000;
         }
         .main__container .arrow__button:hover{background: ${YELLOW} }
-        .main__container .arrow__button.top{bottom: 60px}
+        .main__container .arrow__button.top{bottom: 80px}
         .main__container .arrow__button.bottom{bottom: 1em}
       `}
 
