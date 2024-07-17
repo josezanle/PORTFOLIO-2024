@@ -12,7 +12,7 @@ const Banner = () => {
     const translate = useTranslations('Index');
 
     return (
-        <div className='banner__container'>
+        <div className='banner__container' id='banner'>
             <Navbar />
 
             <div className="content">

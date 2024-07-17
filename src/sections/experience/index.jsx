@@ -36,7 +36,7 @@ const Experience = () => {
 
     return (
         <div className='experience__container'>
-            <div className='title__section'>
+            <div className='title__section' id='experience'>
                 <div className='icon__box'>
                     <Icon name='medical' size={50} fill={VIOLET} />
                 </div>

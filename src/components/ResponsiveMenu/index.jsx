@@ -2,9 +2,10 @@
 
 import { useState, useTransition } from "react";
 import { Icon } from "../icons";
-import { VIOLET } from "@/theme";
+import { VIOLET, WHITE } from "@/theme";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const ResponsiveMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -82,7 +83,17 @@ const MenuContent = ({ isMenuOpen }) => {
             <option value="es">Español</option>
           </select>
 
-          {links?.map((link, i) => <p key={i} className="link">{translate(link?.title)}</p>)}
+          {links?.map((link, i) => 
+            <Link
+              key={i}
+              href={link.href}
+              style={{
+                fontSize: "1.5em",
+                textDecoration: "none",
+                color: WHITE
+              }}
+            >{translate(link?.title)}</Link>
+          )}
 
           <button
             className="download__resume"
@@ -127,11 +138,7 @@ const MenuContent = ({ isMenuOpen }) => {
           -moz-appearance: none; /* Firefox */
           appearance: none; /* Estándar */
         }
-        .responsiveMenu .menu__container .link {
-          font-size: 2em;
-          cursor: pointer;
-          color: white;
-        }
+        
         .responsiveMenu .menu__container .download__resume {
           background: ${VIOLET};
           color: white;

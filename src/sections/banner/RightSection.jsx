@@ -5,8 +5,6 @@ const Image2 = "https://res.cloudinary.com/dubv6xkxf/image/upload/f_webp,q_100/v
 const Image3 = "https://res.cloudinary.com/dubv6xkxf/image/upload/f_webp,q_100/v1714321649/q9tt3zzezuybwyoucx3c.jpg";
 const Image4 = "https://res.cloudinary.com/dubv6xkxf/image/upload/f_webp,q_100/v1714321558/blsvt0cbta4u1zuxwjwr.jpg";
 
-
-
 const RightSection = () => {
     return (
         <div className='rightSection'>

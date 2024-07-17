@@ -12,7 +12,7 @@ const ZanleSection = () => {
     const translate = useTranslations("Index")
 
     return (
-        <div className='zanle__container'>
+        <div className='zanle__container' id='zanle'>
             <div className='title__section'>
                 <div className='icon__box'>
                     <Icon name='medical' size={50} fill={VIOLET} />
@@ -49,7 +49,7 @@ const ZanleSection = () => {
 
             <p className='italicText'>
                 {translate("today.text4")}
-                <b style={{ paddingLeft: "5px", color: VIOLET }}>{translate("today.bold2")}</b>.
+                <b style={{ paddingLeft: "5px", color: VIOLET }}>{translate("today.bold2")}</b>
             </p>
 
             <p className='today'>...</p>

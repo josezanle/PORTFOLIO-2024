@@ -1,5 +1,5 @@
 import { Br } from "@/components/br";
-import { BLACK, LGBLACK, LGWHITE, VIOLET, WHITE, YELLOW } from "../../theme";
+import { LGBLACK, LGWHITE, VIOLET, WHITE, YELLOW } from "../../theme";
 import { useTranslations } from "next-intl";
 
 const Footer = () => {
@@ -8,13 +8,12 @@ const Footer = () => {
 
   return (
     <footer className="footer__content" id="footer">
-
       <h2 className="contact__us">{translate("footer.title")}</h2>
       <p className="contact__email">jose.rios.lm@gmail.com</p>
 
       <a
         className="start__project__button"
-        href="mailto:studiozanle@gmail.com?subject=Presupuesto para desarrollo web"
+        href="mailto:jose.rios.lm@gmail.com?subject=Hola!, te contacto desde tu portfolio!"
       >{translate("footer.button")}</a>
 
       <hr className="footer__divisor" />
