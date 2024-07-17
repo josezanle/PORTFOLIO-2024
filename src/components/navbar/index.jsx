@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
 import { Icon } from '../icons';
-import { BLACK } from '@/theme';
+import { BLACK, VIOLET } from '@/theme';
 import ResponsiveMenu from '../ResponsiveMenu';
 
 const Navbar = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
     return (
         <nav className='Navbar'>
             <div className="logo">
-                <Icon name='watch' size={90} fill='#1c1c1c' />
+                <Icon name='watch' size={90} fill={VIOLET} />
                 <span className='name'>
                     <b>Jose</b>
                     <b>Rios</b>
@@ -91,7 +91,13 @@ const Navbar = () => {
                     align-items: center;
                     padding-right: 1em;
                 }
-                .Navbar .links .link{ cursor: pointer }
+                .Navbar .links .link{ 
+                    cursor: pointer; 
+                    font-size: 1.5em;
+                }
+                .Navbar .links .link:hover{ 
+                    color: ${VIOLET};
+                }
                 .Navbar .lang__mode{
                     color: white;
                     background: ${BLACK};

@@ -1,9 +1,10 @@
 import { Br } from "@/components/br";
-import { BLACK, LGBLACK, LGWHITE, WHITE } from "../../theme";
+import { BLACK, LGBLACK, LGWHITE, VIOLET, WHITE, YELLOW } from "../../theme";
 import { useTranslations } from "next-intl";
 
 const Footer = () => {
   const translate = useTranslations("Index")
+  const linkedinUrl = "https://www.linkedin.com/in/jose-rios-lm"
 
   return (
     <footer className="footer__content" id="footer">
@@ -22,66 +23,58 @@ const Footer = () => {
         <div className="box__footer">
           <h2 className="logo__name"> Zanle Studio</h2>
           <Br />
-          <Br />
-          <Br />
-          <p className="items">LATAM DEVELOPER</p>
-
-          <h2 className="logo__name">
-            <span className="logo__name">&#x2605;</span> 2024</h2>
+          <p className="items">Latam</p>
+          <p className="items">Developer</p>
         </div>
-
-        <Br />
-        <Br />
 
         <div className="box__footer">
           <h2 className="localization">{translate("footer.localization")}</h2>
           <Br />
           <p className="items">Buenos Aires</p>
           <p className="items">Argentina</p>
-          <Br />
-          <Br />
-
-          <h2 className="localization">Working</h2>
-          <p className="items">{translate("footer.remote")}</p>
-          <Br />
-          <Br />
-
         </div>
 
         <div className="box__footer">
-          <h2 className="social">Social</h2>
+          <h2 className="social">Social Media</h2>
           <Br />
 
-          <p className="items">Linkedin</p>
+          <a
+            href={linkedinUrl}
+            target="_blank"
+            className="items"
+            rel="noopener noreferrer"
+          >Linkedin</a>
+
           <p className="items">TikTok</p>
         </div>
-
       </div>
 
       <style jsx>{`
         .footer__content {
           width: 100%;
-          min-height: 125vh;
+          min-height: 150vh;
           display: flex;
           flex-flow: column;
           align-items: center;
           justify-content: center;
           color: white;
           background: ${LGBLACK} ;
-          padding-top: 3em;
+          padding: 3em 0;
         }
         .footer__content .contact__us {
           font-size: 40px;
           font-weight: 400;
           margin-bottom: .5em;
           display: contents;
-          color: ${BLACK};
+          color: ${YELLOW};
         }
         .footer__content .contact__email {
           font-size: 95px;
           font-weight: bold;
-          color: ${LGWHITE}
+          color: ${VIOLET};
+          font-family: "Playfair", serif;
         }
+
         .footer__content .start__project__button {
           padding: 1em .5em;
           margin-top: 2em;
@@ -89,8 +82,8 @@ const Footer = () => {
           font-weight: bold;
           border-radius: 2em;
           width: 400px;
-          background: ${LGWHITE};
-          color: ${BLACK};
+          background: ${VIOLET};
+          color: ${WHITE};
           cursor: pointer;
           text-align: center;
           text-decoration: none;
@@ -114,11 +107,12 @@ const Footer = () => {
           display: flex;
           flex-direction: column;
         }
-        .footer__content .columns__container .box__footer .logo__name {font-size: 45px; color: ${WHITE}}
+        .footer__content .columns__container .box__footer .logo__name,
         .footer__content .columns__container .box__footer .localization ,
         .footer__content .columns__container .box__footer .social {
           font-size: 35px;
-          color: ${WHITE};
+          color: ${YELLOW};
+          text-align: center;
         }
 
         .footer__content .columns__container .box__footer .terms {
@@ -131,29 +125,35 @@ const Footer = () => {
         .footer__content .columns__container .box__footer .items {
           font-weight: 500;
           font-size: 25px;
-          color: ${LGWHITE}
+          color: ${LGWHITE};
+          text-align: center;
         }
 
         .footer__content .columns__container .box__footer a {
           font-weight: 600;
+          text-decoration: none;
         }
 
         @media (max-width: 1280px) {
-          .footer__content {padding: 3em 2em 0 2em}
+          .footer__content {padding: 3em 2em 0 2em; min-height: 150vh}
           .footer__content .contact__us {
             font-size: 30px;
             font-weight: 400;
             margin-bottom: .5em;
           }
-          .footer__content .contact__email {
-            font-size: 70px;
-          }
-          .footer__content .footer__divisor {width: 100%}
-
+          .footer__content .contact__email { font-size: 70px}
+          .footer__content .footer__divisor { width: 100%}
           .footer__content .columns__container{
             width: 100%;
             flex-flow: column;
             align-items: center;
+          }
+          .footer__content .columns__container .box__footer .localization ,
+          .footer__content .columns__container .box__footer .social {
+            padding-top: 1em;
+          }
+          .footer__content .columns__container {
+            margin-bottom: 3em;
           }
         }
 

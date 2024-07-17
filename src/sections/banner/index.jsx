@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import Navbar from '@/components/navbar'
 import RightSection from './RightSection'
 import Title from '@/components/text/title'
+import { BLACK, VIOLET, WHITE, YELLOW } from '@/theme'
 
 const urlImage = "https://res.cloudinary.com/dubv6xkxf/image/upload/v1719540756/ydaib83g2fwoa2jtdjme.jpg"
 
@@ -26,7 +27,7 @@ const Banner = () => {
                         </div>
                     </div>
 
-                    <p className='main'>{translate('banner.job')}</p>
+                    <p className='job'>{translate('banner.job')}</p>
 
                     <p className='introduceMe'>{translate('banner.presentation')}</p>
 
@@ -45,6 +46,7 @@ const Banner = () => {
                     display: flex;
                     flex-flow: column;
                     align-items: center;
+                    background: ${WHITE}
                 }
 
                 .banner__container .content{
@@ -91,11 +93,14 @@ const Banner = () => {
                 .banner__container .content .left__section .introduceMe{
                     font-weight: bold;
                     margin-top: 1.5em;
+                    color: ${BLACK}
                 }
-                .banner__container .content .left__section .main{
+                .banner__container .content .left__section .job{
                     font-size: 40px;
                     line-height: 1em;
                     font-weight: bold;
+                    font-family: "Playfair", serif;
+                    color: ${BLACK}
                 }
                 .banner__container .content .left__section .self__intro{
                     max-width: 350px;

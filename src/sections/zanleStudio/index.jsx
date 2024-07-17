@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Br } from '@/components/br'
 import { Icon } from '@/components/icons'
-import { BLACK } from '@/theme'
+import { BLACK, VIOLET } from '@/theme'
 import { useTranslations } from 'next-intl'
 import Title from '@/components/text/title'
 
@@ -15,10 +15,9 @@ const ZanleSection = () => {
         <div className='zanle__container'>
             <div className='title__section'>
                 <div className='icon__box'>
-                    <Icon name='medical' size={50} fill={BLACK} />
+                    <Icon name='medical' size={50} fill={VIOLET} />
                 </div>
-                {/* <p className='title'>{translate("today.title")}</p> */}
-                <Title value={translate("today.title")}></Title>                
+                <Title value={translate("today.title")} color={VIOLET} />                
             </div>
 
             <div className="section">
@@ -36,13 +35,13 @@ const ZanleSection = () => {
             <Br />
             <Br />
 
-            <p className='italicText'><b>Zanle Studio</b>, {translate("today.text1")}</p>
+            <p className='italicText'><b style={{ color: VIOLET }}>Zanle Studio</b>, {translate("today.text1")}</p>
 
             <Br />
 
             <p className='italicText'>
                 {translate("today.text2")}
-                <b style={{ paddingLeft: "5px" }}>{translate("today.bold1")}</b>
+                <b style={{ paddingLeft: "5px", color: VIOLET  }}>{translate("today.bold1")}</b>
                 {translate("today.text3")}
             </p>
 
@@ -50,7 +49,7 @@ const ZanleSection = () => {
 
             <p className='italicText'>
                 {translate("today.text4")}
-                <b style={{ paddingLeft: "5px" }}>{translate("today.bold2")}</b>.
+                <b style={{ paddingLeft: "5px", color: VIOLET }}>{translate("today.bold2")}</b>.
             </p>
 
             <p className='today'>...</p>
@@ -70,6 +69,7 @@ const ZanleSection = () => {
                     font-weight: bold;
                     font-size: 100px;
                     text-align: center;
+                    color: ${VIOLET}
                 }
                 .zanle__container .title__section{
                     width: 1200px;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Menu = ({ size, fill, onClick }) => {
+export const Close = ({ size, fill, onClick }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -11,10 +11,17 @@ export const Menu = ({ size, fill, onClick }) => {
                 height: size,
                 fill,
                 cursor: "pointer",
-                marginRight: "-5px"
+                marginRight: "-10px"
             }}
         >
-            <path fill="none" stroke={fill} strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32" d="M80 160h352M80 256h352M80 352h352" />
+            <path
+                fill="none"
+                stroke={fill}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="32"
+                d="M368 368L144 144M368 144L144 368"
+            />
         </svg>
     )
 }

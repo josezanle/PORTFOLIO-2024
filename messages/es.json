@@ -14,9 +14,9 @@
             "date": "2024, Buenos Aires, Argentina"
         },
         "phrase": {
-            "phraseTitle": "Quiero que sepas",
+            "phraseTitle": "Quiero que sepas:",
             "phraseText1": "El aprecio que te tengo, si trabajaste junto a mi, formamos equipo o fuiste mi supervisor, ya que todo esto,",
-            "phraseText2": "fue todo gracias a ti."
+            "phraseText2": "todo fue gracias a ti."
         },
         "experience": {
             "experienceTitle": "Experiencia",
@@ -28,10 +28,10 @@
         },
         "today": {
             "title": "HOY",
-            "text1": "es mi hogar, donde puedo mostrate que además de Frontend, Backend y Bases de datos, tambien, puedo diseñar sitios web, contactar clientes, vender un servicio o asesoria.",
+            "text1": "es mi hogar, donde puedo mostrate que además de Frontend, Backend y Bases de datos, tambien, puedo diseñar sitios web, contactar clientes, vender un servicio o asesoria, es mi agencia de desarrollo de software.",
             "text2": "Para mi, es",
             "bold1": "una aventura",
-            "text3": ", el mero hecho de poder mostrar a otras personas, mi negocio, es satisfactorio, divertido, porque no?.",
+            "text3": ", el mero hecho de poder mostrar a otras personas, mi negocio, es satisfactorio, divertido.",
             "text4": "Antes llamado, Zanle Group, no habia gran diferencia, pero suponia que al sumar a un CTO, de una Startup donde trabajé, tenia la necesidad de rebautizar",
             "bold2": "mi negocio."
         },

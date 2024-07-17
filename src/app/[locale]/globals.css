@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
 
 button,
@@ -14,4 +15,5 @@ input {
 html, body{
   min-height: 100vh;
   width: 100%;
+  background: #1e1f1f;
 }

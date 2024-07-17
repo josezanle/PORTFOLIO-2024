@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Icon } from "../icons";
+import { VIOLET } from "@/theme";
 
 const links = [
   {
@@ -36,9 +37,14 @@ const ResponsiveMenu = () => {
         position: "fixed",
         top: "1.5em",
         right: "2em",
-        zIndex: "100"
+        zIndex: "100",
       }}>
-        <Icon name="menu" fill="silver" size={40} onClick={toggleMenu} />
+        <Icon
+          name={isMenuOpen ? "close" : "menu"}
+          fill={isMenuOpen ? "white" : VIOLET}
+          size={40}
+          onClick={toggleMenu}
+        />
       </div >
 
       {
@@ -51,15 +57,31 @@ const ResponsiveMenu = () => {
 };
 
 const MenuContent = ({ isMenuOpen }) => {
+
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/RESUME-JOSE-RIOS-2024.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <div className="responsiveMenu">
-      {/* <div className="menuIcon__box">
-        <Icon name="menu" fill="silver" size={40} onClick={toggleMenu} />
-      </div> */}
 
       {isMenuOpen && (
         <div className="menu__container">
           {links?.map((link, i) => <p key={i} className="link">{link.name}</p>)}
+
+          <button
+            className="download__resume"
+            onClick={downloadResume}
+
+          >
+            <Icon name="download" fill="white" />
+            Resume
+          </button>
         </div>
       )}
 
@@ -72,28 +94,30 @@ const MenuContent = ({ isMenuOpen }) => {
           bottom: 0;
           left: 0;
         }
-        {/* .responsiveMenu .menuIcon__box {
-          position: fixed;
-          top: 1.5em;
-          right: 2em;
-          z-index: 100;
-        } */}
-        
         .responsiveMenu .menu__container {
           position: absolute;
           width: 100vw;
           height: 100vh;
-          background: hsla(0, 0%, 100%, 0.9);
+          background: hsla(40, 41%, 70%, 0.850);
           backdrop-filter: blur(5px);
-          padding: 1em;
+          padding: 2em;
           animation: ${isMenuOpen ? 'slideIn 0.3s forwards' : 'slideOut 0.3s forwards'};
           display: flex;
           flex-flow: column;
+          gap: 1em;
         }
         .responsiveMenu .menu__container .link {
           font-size: 2em;
           cursor: pointer;
-          color: grey;
+          color: white;
+        }
+        .responsiveMenu .menu__container .download__resume {
+          background: ${VIOLET};
+          color: white;
+          font-weight: bold;
+          padding: 1em 0;
+          border-radius: .5em;
+          font-size: 20px; 
         }
         @keyframes slideIn {
           0% { 

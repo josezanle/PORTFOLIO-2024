@@ -13,6 +13,8 @@ import { Medical } from './medical'
 import { Sun } from './sun'
 import { Moon } from './Moon'
 import { Watch } from './watch'
+import { Download } from './download'
+import { Close } from './close'
 
 export const Icon = ({ name = "applause", size = 20, fill = "silver", onClick = () => { } }) => {
     switch (name) {
@@ -21,6 +23,12 @@ export const Icon = ({ name = "applause", size = 20, fill = "silver", onClick = 
 
         case "arrow-short-up":
             return <ArrowShortUp size={size} fill={fill} onClick={onClick} />
+
+        case "close":
+            return <Close size={size} fill={fill} onClick={onClick} />
+
+        case "download":
+            return <Download size={size} fill={fill} onClick={onClick} />
 
         case "watch":
             return <Watch size={size} fill={fill} onClick={onClick} />

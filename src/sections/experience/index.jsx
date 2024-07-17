@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '@/components/icons';
-import { BLACK } from '@/theme';
+import { BLACK, VIOLET, WHITE } from '@/theme';
 import { useTranslations } from 'next-intl';
 import Title from '@/components/text/title';
 
@@ -38,18 +38,21 @@ const Experience = () => {
         <div className='experience__container'>
             <div className='title__section'>
                 <div className='icon__box'>
-                    <Icon name='medical' size={50} fill={BLACK} />
+                    <Icon name='medical' size={50} fill={VIOLET} />
                 </div>
-                <Title value={translate("experience.experienceTitle")}></Title>
+                <Title
+                    value={translate("experience.experienceTitle")}
+                    color={VIOLET}
+                />
             </div>
 
             <div className="top__text">
                 <p className='describe'>
-                    <b style={{ marginRight: "8px" }}>{translate("experience.boldText1")}</b>
+                    <b style={{ marginRight: "8px", color: VIOLET }}>{translate("experience.boldText1")}</b>
                     {translate("experience.text1")}
-                    <b style={{ margin: "0 8px" }}>{translate("experience.boldText2")}</b>
+                    <b style={{ margin: "0 8px", color: VIOLET }}>{translate("experience.boldText2")}</b>
                     {translate("experience.text2")}
-                    <b style={{ marginLeft: "8px" }}>{translate("experience.boldText3")}</b>
+                    <b style={{ marginLeft: "8px", color: VIOLET }}>{translate("experience.boldText3")}</b>
                 </p>
             </div>
 
@@ -86,6 +89,7 @@ const Experience = () => {
                     flex-flow: column;
                     align-items: center;
                     justify-content: center;
+                    background: ${WHITE};
                 }
                 .experience__container .title__section {
                     width: 1200px;

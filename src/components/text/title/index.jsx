@@ -9,6 +9,7 @@ const Title = ({ value = "", fontSize = "100px", color = BLACK  }) => {
                 .title__component{
                     font-weight: bold;
                     font-size: ${fontSize};
+                    font-family: "Playfair", serif;
                     color: ${color} ;
                     line-height: 1em;
                 }
