@@ -1,31 +1,10 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { Icon } from "../icons";
 import { VIOLET } from "@/theme";
-
-const links = [
-  {
-    name: "SOBRE MI",
-    href: "",
-    color: ""
-  },
-  {
-    name: "EXPERIENCIA",
-    href: "",
-    color: ""
-  },
-  {
-    name: "SKILLS",
-    href: "",
-    color: ""
-  },
-  {
-    name: "CONTACTO",
-    href: "",
-    color: ""
-  },
-]
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 const ResponsiveMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,6 +37,12 @@ const ResponsiveMenu = () => {
 
 const MenuContent = ({ isMenuOpen }) => {
 
+  const [isPending, startTransition] = useTransition()
+
+  const translate = useTranslations('Index');
+  const router = useRouter()
+  const localActive = useLocale()
+
   const downloadResume = () => {
     const link = document.createElement('a');
     link.href = '/RESUME-JOSE-RIOS-2024.pdf';
@@ -67,12 +52,37 @@ const MenuContent = ({ isMenuOpen }) => {
     document.body.removeChild(link);
   }
 
+  const onLangChange = (e) => {
+    const nextLocale = e.target.value
+
+    startTransition(() => {
+      router.replace(`/${nextLocale}`)
+    })
+  }
+
+  const links = [
+    { title: 'navbarLinks.home', href: '#banner' },
+    { title: 'navbarLinks.experience', href: '#experience' },
+    { title: 'navbarLinks.zanleStudio', href: '#zanle' },
+    { title: 'navbarLinks.contact', href: '#footer' },
+  ];
+
   return (
     <div className="responsiveMenu">
 
       {isMenuOpen && (
         <div className="menu__container">
-          {links?.map((link, i) => <p key={i} className="link">{link.name}</p>)}
+          <select
+            defaultValue={localActive}
+            disabled={isPending}
+            onChange={onLangChange}
+            className='lang__select'
+          >
+            <option value="en">English</option>
+            <option value="es">Español</option>
+          </select>
+
+          {links?.map((link, i) => <p key={i} className="link">{translate(link?.title)}</p>)}
 
           <button
             className="download__resume"
@@ -105,6 +115,17 @@ const MenuContent = ({ isMenuOpen }) => {
           display: flex;
           flex-flow: column;
           gap: 1em;
+        }
+        .responsiveMenu .menu__container .lang__select {
+          width: 100px;
+          height: 40px;
+          outline: none;
+          border: none;
+          border-radius: .5em;
+          padding: 0 1em;
+          -webkit-appearance: none; /* Chrome, Safari, Opera */
+          -moz-appearance: none; /* Firefox */
+          appearance: none; /* Estándar */
         }
         .responsiveMenu .menu__container .link {
           font-size: 2em;

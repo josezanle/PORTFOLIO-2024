@@ -4,8 +4,7 @@ import { useTranslations } from 'next-intl'
 // UI
 import Navbar from '@/components/navbar'
 import RightSection from './RightSection'
-import Title from '@/components/text/title'
-import { BLACK, VIOLET, WHITE, YELLOW } from '@/theme'
+import { BLACK, WHITE} from '@/theme'
 
 const urlImage = "https://res.cloudinary.com/dubv6xkxf/image/upload/v1719540756/ydaib83g2fwoa2jtdjme.jpg"
 
