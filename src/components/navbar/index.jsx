@@ -100,7 +100,7 @@ const Navbar = () => {
 
                 }
                 .Navbar.sticky {
-                    padding: 2em;
+                    padding: 3em;
                     background-color: hsla(0, 0%, 100%, 0.777); 
                     backdrop-filter: blur(0.7em);
                 }

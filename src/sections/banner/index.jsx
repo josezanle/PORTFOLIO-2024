@@ -55,6 +55,7 @@ const Banner = () => {
                     justify-content: center;
                     align-items: center;
                     gap: 2em;
+                    margin-top: 8em;
                 }
                 .banner__container .content .left__section{
                     width: 600px;
