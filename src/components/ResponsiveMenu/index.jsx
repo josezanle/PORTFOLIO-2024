@@ -28,7 +28,7 @@ const ResponsiveMenu = () => {
       </div >
 
       {
-        isMenuOpen ? <MenuContent isMenuOpen={isMenuOpen} /> : null
+        isMenuOpen ? <MenuContent toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} /> : null
       }
 
     </>
@@ -36,7 +36,7 @@ const ResponsiveMenu = () => {
   );
 };
 
-const MenuContent = ({ isMenuOpen }) => {
+const MenuContent = ({ isMenuOpen, toggleMenu }) => {
 
   const [isPending, startTransition] = useTransition()
 
@@ -87,6 +87,7 @@ const MenuContent = ({ isMenuOpen }) => {
             <Link
               key={i}
               href={link.href}
+              onClick={toggleMenu}
               style={{
                 fontSize: "1.5em",
                 textDecoration: "none",
