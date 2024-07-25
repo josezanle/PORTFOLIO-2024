@@ -4,12 +4,14 @@ import { useTranslations } from 'next-intl'
 // UI
 import Navbar from '@/components/navbar'
 import RightSection from './RightSection'
-import { BLACK, WHITE} from '@/theme'
+import { VIOLET, WHITE } from '@/theme'
+import dayjs from 'dayjs'
 
 const urlImage = "https://res.cloudinary.com/dubv6xkxf/image/upload/v1719540756/ydaib83g2fwoa2jtdjme.jpg"
 
 const Banner = () => {
     const translate = useTranslations('Index');
+    const formattedDate = dayjs().format('MMM DD, YYYY');
 
     return (
         <div className='banner__container' id='banner'>
@@ -22,7 +24,7 @@ const Banner = () => {
                         <img className='profile__image' src={urlImage} alt="" />
                         <div className="text">
                             <p className='name'>Jose Rios</p>
-                            <p className='date'>2 min. read - Jul 04, 2024</p>
+                            <p className='date'>{translate('banner.read')} - {formattedDate} </p>
                         </div>
                     </div>
 
@@ -93,14 +95,13 @@ const Banner = () => {
                 .banner__container .content .left__section .introduceMe{
                     font-weight: bold;
                     margin-top: 1.5em;
-                    color: ${BLACK}
                 }
                 .banner__container .content .left__section .job{
                     font-size: 40px;
                     line-height: 1em;
                     font-weight: bold;
                     font-family: "Playfair", serif;
-                    color: ${BLACK}
+                    color: ${VIOLET}
                 }
                 .banner__container .content .left__section .self__intro{
                     max-width: 350px;

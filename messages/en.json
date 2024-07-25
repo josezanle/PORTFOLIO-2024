@@ -7,18 +7,22 @@
             "contact": "Contact"
         },
         "banner": {
-            "presentation": "Let me introduce myself, I'm a:",
+            "read": "2 min. read",
+            "presentation": "Let me introduce myself",
             "job": "Frontend Developer",
             "description1": "In short, i am a developer of interfaces, logic, and databases.",
             "description2": "If you can imagine it, you can create it.",
             "date": "2024, Buenos Aires, Argentina"
+        },
+        "greeting": {
+            "good": "It's",
+            "phrase": "Today is a new day, to try again."
         },
         "phrase": {
             "phraseTitle": "I want you to know:",
             "phraseText1": "The appreciation I have for you, whether we worked together, formed a team, or you were my supervisor,",
             "phraseText2": "is all thanks to you."
         },
-
         "experience": {
             "experienceTitle": "Experience",
             "boldText1": "Ok,",
@@ -27,7 +31,6 @@
             "text2": "in some",
             "boldText3": "STARTUPS."
         },
-
         "today": {
             "title": "TODAY",
             "text1": "is my home, where I can show you that besides Frontend, Backend, and Databases, I can also design websites, contact clients, sell a service, or provide advice.",
@@ -37,13 +40,11 @@
             "text4": "Previously known as Zanle Group, there wasn’t a significant difference, but I assumed that by adding a CTO from a startup where I worked, I needed to rename",
             "bold2": "my business."
         },
-
         "footer": {
             "title": "Send me a email",
             "button": "Contact",
             "localization": "Localization",
             "remote": "100% Remote"
         }
-
     }
 }

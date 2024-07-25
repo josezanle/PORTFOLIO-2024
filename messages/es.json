@@ -7,15 +7,20 @@
             "contact": "Contacto"
         },
         "banner": {
-            "presentation": "Dejame presentarme, soy un:",
+            "read": "2 min. lectura",
+            "presentation": "Dejame presentarme",
             "job": "Desarrollador Frontend",
-            "description1": "En pocas palabras, soy desarrollador de interfaces, lógica y bases de datos,",
+            "description1": "Soy desarrollador de interfaces, lógica y bases de datos,",
             "description2": "Si puedes imaginarlo, puedes crearlo.",
             "date": "2024, Buenos Aires, Argentina"
         },
+        "greeting": {
+            "good": "Buen",
+            "phrase": "Hoy es un nuevo día, para volver a intentarlo."
+        },
         "phrase": {
             "phraseTitle": "Quiero que sepas:",
-            "phraseText1": "El aprecio que te tengo, si trabajaste junto a mi, formamos equipo o fuiste mi supervisor, ya que todo esto,",
+            "phraseText1": "El aprecio que siento, si trabajaste junto a mi o fuiste mi supervisor, ya que todo esto,",
             "phraseText2": "todo fue gracias a ti."
         },
         "experience": {

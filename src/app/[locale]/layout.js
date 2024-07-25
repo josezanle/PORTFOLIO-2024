@@ -7,7 +7,6 @@ import { getMessages } from 'next-intl/server';
 
 import { ThemeProvider } from "@/contexts/providers/themeProvider";
 
-// const montserrat = Montserrat({ subsets: ["latin"] });
 const raleway = Raleway({ subsets: ["latin"] });
 const playfair = Playfair({ subsets: ["latin"] });
 

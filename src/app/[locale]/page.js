@@ -1,7 +1,9 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
+import { VIOLET, YELLOW } from '@/theme';
 
+// sections
 import Banner from '@/sections/banner';
 import Phrase from '@/sections/phrase';
 import Experience from '@/sections/experience';
@@ -9,12 +11,13 @@ import ZanleSection from '@/sections/zanleStudio';
 import Footer from '@/sections/footer';
 import Reference from '@/sections/reference';
 import CopyRigth from '@/sections/copyrigth';
-import { VIOLET, YELLOW } from '@/theme';
+import Greeting from '@/sections/greeting';
 
 function Body() {
   // por cada component, que se agrega, se añade un useRef= null, para mapear, y scrollear a travez del index.
   const components = [
     <Banner />,
+    <Greeting />,
     <Phrase />,
     <Reference />,
     <Experience />,

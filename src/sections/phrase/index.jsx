@@ -41,7 +41,7 @@ const Phrase = () => {
                 width: 600px;
                 font-size: 30px;
                 font-weight: 400;
-                color: silver;
+                color: white;
             }
             .container__phrase .single_text .especial{ 
                 color: ${YELLOW};
