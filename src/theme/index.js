@@ -1,10 +1,9 @@
-export const VIOLET = "#8e71d6"
-export const CYAN = "#72c4b9"
+export const VIOLET = "#b5a6ff"
 export const CORAL = "#Bf4341"
-export const YELLOW = "#d1bc92"
-export const BLACK = "#171717"
+export const YELLOW = "#f7edde"
+export const BLACK = "#050307"
 export const LGBLACK = "#1e1f1f"
-export const WHITE = "#ffffff"
+export const WHITE = "#f8f8f8"
 export const LGWHITE = "silver"
 
 const lightTheme = {

@@ -4,8 +4,7 @@ import React, { useEffect, useState, useTransition } from 'react'
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
-import { Icon } from '../icons';
-import { BLACK, VIOLET } from '@/theme';
+import { BLACK } from '@/theme';
 import ResponsiveMenu from '../ResponsiveMenu';
 import Link from 'next/link';
 
@@ -26,7 +25,7 @@ const Navbar = () => {
     const onLangChange = (e) => {
         const nextLocale = e.target.value
 
-        startTransition(() => { router.replace(`/${nextLocale}`)})
+        startTransition(() => { router.replace(`/${nextLocale}`) })
     }
 
     const [isSticky, setIsSticky] = useState(false);
@@ -49,13 +48,7 @@ const Navbar = () => {
 
     return (
         <nav className={`Navbar ${isSticky ? "sticky" : ""}`}>
-            <div className="logo">
-                <Icon name='watch' size={90} fill={VIOLET} />
-                <span className='name'>
-                    <b>Jose</b>
-                    <b>Rios</b>
-                </span>
-            </div>
+            <div className="logo"><p className='name'>JOSE RIOS</p></div>
 
             <span className='links'>
                 {links.map((link, i) => (
@@ -63,10 +56,12 @@ const Navbar = () => {
                         key={i}
                         href={link.href}
                         style={{
-                            fontSize: "1.5em",
-                            textDecoration:"none",
-                            color: BLACK
+                            fontSize: "15px",
+                            textDecoration: "none",
+                            color: BLACK,
+                            fontWeight: "bold"
                         }}
+                        className='link'
                     >{translate(link?.title)}</Link>
                 ))}
             </span>
@@ -93,16 +88,16 @@ const Navbar = () => {
                     padding-top: 1em;
                     display: flex;
                     align-items: center;
+                    justify-content: space-between;
                     position: fixed;
                     z-index: 100;
                     background: transparent;
                     transition: background-color 0.3s ease-in-out;
-
                 }
                 .Navbar.sticky {
                     padding: 3em;
-                    background-color: hsla(0, 0%, 100%, 0.777); 
-                    backdrop-filter: blur(0.7em);
+                    background-color: hsla(0, 0%, 100%, 0.6); 
+                    backdrop-filter: blur(12px);
                 }
                 .Navbar .menu__container__responsive{ display: none}
                 .Navbar .logo{
@@ -110,23 +105,20 @@ const Navbar = () => {
                     display: flex;
                     align-items: center;
                     gap: .5em;
+                    background: transparent;
                 }
                 .Navbar .logo .name{
-                    display: flex;
-                    flex-flow: column;
-                }
-                .Navbar .logo .name b{
-                    line-height: 1em;
-                    letter-spacing: .3em;
-                    font-size: 1.5em;
+                    font-weight: bold;
+                    font-size: 25px;
+                    letter-spacing: -2px;
                 }
                 .Navbar .links{
                     width: 100%;
                     gap: 1em;
                     display: flex;
-                    justify-content: flex-end;
+                    justify-content: space-evenly;
                     align-items: center;
-                    padding-right: 1em;
+                    background: transparent;
                 }
                 .Navbar .lang__select{
                     color: white;

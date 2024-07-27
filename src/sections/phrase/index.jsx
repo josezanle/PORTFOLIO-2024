@@ -12,7 +12,9 @@ const Phrase = () => {
         <div className='container__phrase'>
             <span className='content'>
                 <div className="box__title">
-                    <Title value={translate("phrase.phraseTitle")} color='#8e71d6' />
+                    <Title 
+                    value={translate("phrase.phraseTitle")} 
+                    color={YELLOW} />
                 </div>
 
                 <p className='single_text'>{translate("phrase.phraseText1")} 

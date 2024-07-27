@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '@/components/icons';
-import { BLACK, VIOLET, WHITE } from '@/theme';
+import { BLACK, VIOLET, WHITE, YELLOW } from '@/theme';
 import { useTranslations } from 'next-intl';
 import Title from '@/components/text/title';
 
@@ -38,21 +38,21 @@ const Experience = () => {
         <div className='experience__container'>
             <div className='title__section' id='experience'>
                 <div className='icon__box'>
-                    <Icon name='medical' size={50} fill={VIOLET} />
+                    <Icon name='medical' size={50} fill={YELLOW} />
                 </div>
                 <Title
                     value={translate("experience.experienceTitle")}
-                    color={VIOLET}
+                    color={YELLOW}
                 />
             </div>
 
             <div className="top__text">
                 <p className='describe'>
-                    <b style={{ marginRight: "8px", color: VIOLET }}>{translate("experience.boldText1")}</b>
+                    <b className='italicText' style={{ marginRight: "8px" }}>{translate("experience.boldText1")}</b>
                     {translate("experience.text1")}
-                    <b style={{ margin: "0 8px", color: VIOLET }}>{translate("experience.boldText2")}</b>
+                    <b className='italicText' style={{ margin: "0 8px" }}>{translate("experience.boldText2")}</b>
                     {translate("experience.text2")}
-                    <b style={{ marginLeft: "8px", color: VIOLET }}>{translate("experience.boldText3")}</b>
+                    <b className='italicText' style={{ marginLeft: "8px" }}>{translate("experience.boldText3")}</b>
                 </p>
             </div>
 
@@ -112,8 +112,11 @@ const Experience = () => {
                     font-size: 30px;
                     color: ${BLACK};
                 }
-                .experience__container .top__text .describe b{
-                    color: ${BLACK};
+                
+                .experience__container .top__text .describe .italicText{
+                    font-style: italic;
+                    font-weight: 100;
+                    font-size: 30px
                 }
                 .experience__container .row{
                     width: 1200px;
@@ -133,6 +136,7 @@ const Experience = () => {
                     border: 3px solid #f1f1f1;
                     text-decoration: none;
                     color: ${BLACK};
+                    background: ${YELLOW}
                 }
                 a:focus { color: ${BLACK} }
                 .experience__container .row .item:hover{ background: hsla(0, 0%, 95%, 0.5)}

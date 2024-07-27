@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import dayjs from 'dayjs';
 import { useTranslations, useLocale } from 'next-intl';
-import { VIOLET, WHITE } from '@/theme';
+import { BLACK, VIOLET, WHITE, YELLOW } from '@/theme';
 
 import localeData from 'dayjs/plugin/localeData';
 import 'dayjs/locale/es';
@@ -53,22 +53,24 @@ const Greeting = () => {
                 .greeting__container .text .good,
                 .greeting__container .text .day{
                     width: 100%;
-                    color: ${VIOLET};
+                    color: ${YELLOW};
                     font-size: 120px;
                     text-transform: uppercase;
                     font-weight: bold;
                     line-height: .9em;
+                    letter-spacing: -5px;
                 }
 
                 .greeting__container .text .phrase{
                     width: 400px;
-                    color: ${WHITE};
-                    background: hsla(40, 41%, 70%, 0.7);
+                    color: ${BLACK};
+                    background: hsla(36, 61%, 92%, 0.8);
                     backdrop-filter: blur(7px);
-                    font-size: 25px;
-                    padding: .5em;
-                    text-transform: uppercase;
-                    font-weight: bold;
+                    font-size: 15px;
+                    padding: 1em;
+                    text-transform: capitalize;
+                    font-style: italic;
+                    font-weight: 100;
                     margin-top: .5em;
                     border-radius: .5em;
                 }

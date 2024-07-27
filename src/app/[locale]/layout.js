@@ -1,5 +1,4 @@
-// import { Montserrat } from "next/font/google";
-import { Raleway, Playfair } from "next/font/google";
+import { Catamaran } from "next/font/google";
 import "./globals.css";
 
 import { NextIntlClientProvider } from 'next-intl';
@@ -7,8 +6,7 @@ import { getMessages } from 'next-intl/server';
 
 import { ThemeProvider } from "@/contexts/providers/themeProvider";
 
-const raleway = Raleway({ subsets: ["latin"] });
-const playfair = Playfair({ subsets: ["latin"] });
+const catamaran = Catamaran({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Jose Rios",
@@ -25,7 +23,7 @@ export default async function RootLayout({ children, params: { locale } }) {
 
   return (
     <html lang={locale}>
-      <body className={`${raleway.className} ${playfair.className}`}>
+      <body className={catamaran.className}>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>{children}</ThemeProvider>
         </NextIntlClientProvider>

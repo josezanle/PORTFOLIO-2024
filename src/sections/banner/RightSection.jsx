@@ -1,9 +1,6 @@
 import React from 'react'
 
 const Image1 = "https://res.cloudinary.com/dubv6xkxf/image/upload/f_webp,q_100/v1714321558/blsvt0cbta4u1zuxwjwr.jpg";
-const Image2 = "https://res.cloudinary.com/dubv6xkxf/image/upload/f_webp,q_100/v1714306272/b5j8a1jazzjbtolhe4ln.jpg";
-const Image3 = "https://res.cloudinary.com/dubv6xkxf/image/upload/f_webp,q_100/v1714321649/q9tt3zzezuybwyoucx3c.jpg";
-const Image4 = "https://res.cloudinary.com/dubv6xkxf/image/upload/f_webp,q_100/v1714321558/blsvt0cbta4u1zuxwjwr.jpg";
 
 const RightSection = () => {
     return (
@@ -32,22 +29,22 @@ const RightSection = () => {
                 }
             .rightSection .div2 { 
                 grid-area: 2 / 1 / 3 / 3;
-                background-image: url(${Image2});
+                background-image: url(${Image1});
                 background-size: cover;
-                background-position: left;
+                background-position: top;
                 border-radius: .5em;
                 }
             .rightSection .div3 { 
                 grid-area: 2 / 3 / 3 / 5;
-                background-image: url(${Image3});
+                background-image: url(${Image1});
                 background-size: cover;
-                background-position: center;
+                background-position: bottom;
                 border-radius: .5em;
 
                 }
             .rightSection .div4 { 
                 grid-area: 3 / 1 / 4 / 5;
-                background-image: url(${Image4});
+                background-image: url(${Image1});
                 background-size: cover;
                 background-position: bottom;
                 border-radius: .5em;

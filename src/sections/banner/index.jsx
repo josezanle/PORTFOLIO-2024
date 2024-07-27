@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 // UI
 import Navbar from '@/components/navbar'
 import RightSection from './RightSection'
-import { VIOLET, WHITE } from '@/theme'
+import { BLACK, VIOLET, WHITE } from '@/theme'
 import dayjs from 'dayjs'
 
 const urlImage = "https://res.cloudinary.com/dubv6xkxf/image/upload/v1719540756/ydaib83g2fwoa2jtdjme.jpg"
@@ -21,7 +21,7 @@ const Banner = () => {
                 <div className="left__section">
 
                     <div className="profile__section">
-                        <img className='profile__image' src={urlImage} alt="" />
+                        <img className='profile__image' src={urlImage} alt="some img" />
                         <div className="text">
                             <p className='name'>Jose Rios</p>
                             <p className='date'>{translate('banner.read')} - {formattedDate} </p>
@@ -100,13 +100,14 @@ const Banner = () => {
                     font-size: 40px;
                     line-height: 1em;
                     font-weight: bold;
-                    font-family: "Playfair", serif;
-                    color: ${VIOLET}
+                    color: ${BLACK};
+                    letter-spacing: -2px;
                 }
                 .banner__container .content .left__section .self__intro{
                     max-width: 350px;
                     font-size: 22px;
                     font-style: italic;
+                    font-weight: 100;
                     margin-top: .5em;
                 }
                 .banner__container .content .left__section .miniText{

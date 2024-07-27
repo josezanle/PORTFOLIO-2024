@@ -1,4 +1,4 @@
-import { LGBLACK, LGWHITE, VIOLET, WHITE, YELLOW } from '@/theme'
+import { LGBLACK, VIOLET, WHITE, YELLOW } from '@/theme'
 import React from 'react'
 
 const Reference = () => {
@@ -10,7 +10,7 @@ const Reference = () => {
                 <p className='column'>Ux Ui Design</p>
             </div>
 
-            <div className="big__letters">DEV &#x2605;</div>
+            <div className="big__letters">dEV &#x2605;</div>
 
             <div className="single__text">REACT JS</div>
             <div className="single__text">REACT NATIVE</div>
@@ -48,15 +48,15 @@ const Reference = () => {
                 text-transform: uppercase;
                 width: 100%;
                 text-align: center;
+                font-weight: 600;
             }
             .reference__container .big__letters{
                 font-size: 120px;
-                color: ${VIOLET};
+                color: ${YELLOW};
                 font-weight: bold;
                 transform: scaleY(2);
                 margin: 1em 0;
                 position: relative;
-                font-family: "Playfair", serif;
             }
             .reference__container .big__letters::after{
                 position: absolute;
@@ -65,7 +65,6 @@ const Reference = () => {
                 content: "Since";
                 font-size: 16px;
                 font-weight: bold;
-                font-family: "Raleway", serif;
                 color: ${YELLOW};
             }
             .reference__container .big__letters::before{
@@ -79,7 +78,6 @@ const Reference = () => {
                 border: 2px solid ${YELLOW};
                 color: ${YELLOW};
                 padding: 5px;
-                font-family: "Raleway", serif;
             }
 
             .reference__container .single__text{

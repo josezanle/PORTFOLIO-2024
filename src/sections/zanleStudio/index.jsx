@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Br } from '@/components/br'
 import { Icon } from '@/components/icons'
-import { BLACK, VIOLET } from '@/theme'
+import { BLACK, VIOLET, WHITE, YELLOW } from '@/theme'
 import { useTranslations } from 'next-intl'
 import Title from '@/components/text/title'
 
@@ -15,9 +15,9 @@ const ZanleSection = () => {
         <div className='zanle__container' id='zanle'>
             <div className='title__section'>
                 <div className='icon__box'>
-                    <Icon name='medical' size={50} fill={VIOLET} />
+                    <Icon name='medical' size={50} fill={YELLOW} />
                 </div>
-                <Title value={translate("today.title")} color={VIOLET} />                
+                <Title value={translate("today.title")} color={YELLOW} />
             </div>
 
             <div className="section">
@@ -30,27 +30,27 @@ const ZanleSection = () => {
             <Br />
             <Br />
 
-            <p className='today'>&#9996;</p>
+            <div className="description__container">
+                <p className='description'><b className='italicText'>Zanle Studio</b>, {translate("today.text1")}</p>
 
-            <Br />
-            <Br />
+                <Br />
 
-            <p className='italicText'><b style={{ color: VIOLET }}>Zanle Studio</b>, {translate("today.text1")}</p>
+                <p className='description'>
+                    {translate("today.text2")}
+                    <b className='italicText' style={{ paddingLeft: "5px" }}>{translate("today.bold1")}</b>
+                    {translate("today.text3")}
+                </p>
 
-            <Br />
+                <Br />
 
-            <p className='italicText'>
-                {translate("today.text2")}
-                <b style={{ paddingLeft: "5px", color: VIOLET  }}>{translate("today.bold1")}</b>
-                {translate("today.text3")}
-            </p>
+                <p className='description'>
+                    {translate("today.text4")}
+                    <b className='italicText' style={{ paddingLeft: "5px" }}>{translate("today.bold2")}</b>
+                </p>
 
-            <Br />
+            </div>
 
-            <p className='italicText'>
-                {translate("today.text4")}
-                <b style={{ paddingLeft: "5px", color: VIOLET }}>{translate("today.bold2")}</b>
-            </p>
+
 
             <p className='today'>...</p>
 
@@ -62,14 +62,15 @@ const ZanleSection = () => {
                     display: flex;
                     flex-flow: column;
                     align-items: center;
-                    margin-top: 10em;
+                    padding-top: 10em;
+                    background: ${WHITE}
                 }
                 .zanle__container .today{
                     width: 100%;
                     font-weight: bold;
                     font-size: 100px;
                     text-align: center;
-                    color: ${VIOLET}
+                    color: ${YELLOW}
                 }
                 .zanle__container .title__section{
                     width: 1200px;
@@ -108,9 +109,20 @@ const ZanleSection = () => {
                     background-position: center;
                     border-radius: .5em;
                 }
-                .zanle__container .italicText{
+                .zanle__container .description__container{
                     width: 1200px;
-                    font-size: 30px;
+                    display: flex;
+                    align-items: flex-end;
+                    flex-flow: column;
+                }
+                .zanle__container .description__container .description{
+                    font-size: 21px;
+                    width: 600px;
+                }
+                .zanle__container .description__container .description .italicText{
+                    font-style: italic;
+                    font-weight: 100;
+                    font-size: 30px
                 }
 
                 @media( max-width: 1260px){
@@ -119,13 +131,15 @@ const ZanleSection = () => {
                     .zanle__container .section .box .content{
                         max-width: 100%;
                     }
-                    .zanle__container .italicText{ width: 100%; padding: 0 1em; }
+                    .zanle__container .description__container{ width: 100%; padding: 0 1em; }
                     .zanle__container .section{
                         width: 100%;
                         padding: 2em;
                     }
                 }
-                
+                @media( max-width: 640px){
+                    .zanle__container .description__container .description{ width: 100% }
+                }
             `} </style>
 
         </div>

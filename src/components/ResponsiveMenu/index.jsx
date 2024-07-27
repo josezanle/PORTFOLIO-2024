@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { Icon } from "../icons";
-import { VIOLET, WHITE } from "@/theme";
+import { YELLOW, WHITE, BLACK } from "@/theme";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -21,7 +21,7 @@ const ResponsiveMenu = () => {
       }}>
         <Icon
           name={isMenuOpen ? "close" : "menu"}
-          fill={isMenuOpen ? "white" : VIOLET}
+          fill={BLACK}
           size={40}
           onClick={toggleMenu}
         />
@@ -91,7 +91,7 @@ const MenuContent = ({ isMenuOpen, toggleMenu }) => {
               style={{
                 fontSize: "1.5em",
                 textDecoration: "none",
-                color: WHITE
+                color: BLACK
               }}
             >{translate(link?.title)}</Link>
           )}
@@ -99,9 +99,8 @@ const MenuContent = ({ isMenuOpen, toggleMenu }) => {
           <button
             className="download__resume"
             onClick={downloadResume}
-
           >
-            <Icon name="download" fill="white" />
+            <Icon name="download" fill={YELLOW} />
             Resume
           </button>
         </div>
@@ -120,7 +119,7 @@ const MenuContent = ({ isMenuOpen, toggleMenu }) => {
           position: absolute;
           width: 100vw;
           height: 100vh;
-          background: hsla(40, 41%, 70%, 0.850);
+          background: ${YELLOW};
           backdrop-filter: blur(5px);
           padding: 2em;
           animation: ${isMenuOpen ? 'slideIn 0.3s forwards' : 'slideOut 0.3s forwards'};
@@ -141,8 +140,8 @@ const MenuContent = ({ isMenuOpen, toggleMenu }) => {
         }
         
         .responsiveMenu .menu__container .download__resume {
-          background: ${VIOLET};
-          color: white;
+          background: ${BLACK};
+          color: ${YELLOW};
           font-weight: bold;
           padding: 1em 0;
           border-radius: .5em;

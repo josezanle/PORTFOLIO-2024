@@ -1,5 +1,5 @@
 import { Br } from "@/components/br";
-import { LGBLACK, LGWHITE, VIOLET, WHITE, YELLOW } from "../../theme";
+import { BLACK, LGBLACK, LGWHITE, VIOLET, WHITE, YELLOW } from "../../theme";
 import { useTranslations } from "next-intl";
 
 const Footer = () => {
@@ -57,8 +57,10 @@ const Footer = () => {
           align-items: center;
           justify-content: center;
           color: white;
-          background: ${LGBLACK} ;
+          background: ${LGBLACK};
           padding: 3em 0;
+          border-top-left-radius: 3em;
+          border-top-right-radius: 3em;
         }
         .footer__content .contact__us {
           font-size: 40px;
@@ -70,8 +72,7 @@ const Footer = () => {
         .footer__content .contact__email {
           font-size: 95px;
           font-weight: bold;
-          color: ${VIOLET};
-          font-family: "Playfair", serif;
+          color: ${YELLOW};
         }
 
         .footer__content .start__project__button {
@@ -81,8 +82,8 @@ const Footer = () => {
           font-weight: bold;
           border-radius: 2em;
           width: 400px;
-          background: ${VIOLET};
-          color: ${WHITE};
+          background: ${YELLOW};
+          color: ${BLACK};
           cursor: pointer;
           text-align: center;
           text-decoration: none;
@@ -109,7 +110,7 @@ const Footer = () => {
         .footer__content .columns__container .box__footer .logo__name,
         .footer__content .columns__container .box__footer .localization ,
         .footer__content .columns__container .box__footer .social {
-          font-size: 35px;
+          font-size: 28px;
           color: ${YELLOW};
           text-align: center;
         }
@@ -123,7 +124,7 @@ const Footer = () => {
 
         .footer__content .columns__container .box__footer .items {
           font-weight: 500;
-          font-size: 25px;
+          font-size: 17px;
           color: ${LGWHITE};
           text-align: center;
         }

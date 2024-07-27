@@ -9,9 +9,9 @@ const Title = ({ value = "", fontSize = "100px", color = BLACK  }) => {
                 .title__component{
                     font-weight: bold;
                     font-size: ${fontSize};
-                    font-family: "Playfair", serif;
-                    color: ${color} ;
+                    color: ${color};
                     line-height: 1em;
+                    letter-spacing: -6px;
                 }
 
                 @media( max-width: 710px){ .title__component { font-size: 70px}}
