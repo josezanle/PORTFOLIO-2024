@@ -11,7 +11,7 @@ const Title = ({ value = "", fontSize = "100px", color = BLACK  }) => {
                     font-size: ${fontSize};
                     color: ${color};
                     line-height: 1em;
-                    letter-spacing: -6px;
+                    letter-spacing: -4px;
                 }
 
                 @media( max-width: 710px){ .title__component { font-size: 70px}}

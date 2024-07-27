@@ -48,11 +48,11 @@ const Experience = () => {
 
             <div className="top__text">
                 <p className='describe'>
-                    <b className='italicText' style={{ marginRight: "8px" }}>{translate("experience.boldText1")}</b>
+                    <p className='italicText' style={{ marginRight: "8px" }}>{translate("experience.boldText1")}</p>
                     {translate("experience.text1")}
-                    <b className='italicText' style={{ margin: "0 8px" }}>{translate("experience.boldText2")}</b>
+                    <p className='italicText' style={{ margin: "0 8px" }}>{translate("experience.boldText2")}</p>
                     {translate("experience.text2")}
-                    <b className='italicText' style={{ marginLeft: "8px" }}>{translate("experience.boldText3")}</b>
+                    <p className='italicText' style={{ marginLeft: "8px" }}>{translate("experience.boldText3")}</p>
                 </p>
             </div>
 
@@ -115,7 +115,6 @@ const Experience = () => {
                 
                 .experience__container .top__text .describe .italicText{
                     font-style: italic;
-                    font-weight: 100;
                     font-size: 30px
                 }
                 .experience__container .row{
