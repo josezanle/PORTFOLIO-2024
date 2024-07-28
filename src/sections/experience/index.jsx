@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '@/components/icons';
-import { BLACK, RED, VIOLET, WHITE, YELLOW } from '@/theme';
+import { BLACK, YELLOW } from '@/theme';
 import { useTranslations } from 'next-intl';
 import Title from '@/components/text/title';
 
@@ -9,29 +9,6 @@ const multifiberImg = "https://images.pexels.com/photos/5745184/pexels-photo-574
 const gbmImg = "https://images.pexels.com/photos/3228762/pexels-photo-3228762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 const sooftImg = "https://images.pexels.com/photos/6340617/pexels-photo-6340617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 
-const DATA = [
-    {
-        name: "Multifiber",
-        type: "Custom Development",
-        year: "2023",
-        code: "cl",
-        href: "https://multifiber.app/"
-    },
-    {
-        name: "GreenBondMeter",
-        type: "Fintech",
-        year: "2022",
-        code: "ar",
-        href: "https://gbm.eco/"
-    },
-    {
-        name: "SOOFT Technology",
-        type: "Software factory",
-        year: "2021",
-        code: "ar",
-        href: "https://sooft.tech/"
-    },
-]
 
 const Experience = () => {
     const translate = useTranslations('Index');
@@ -57,19 +34,34 @@ const Experience = () => {
 
             <div className="company company1">
                 <div className="content">
-                    <div className="name">MULTIFIBER <Icon name='arrow-large' fill='white' size={30} />  </div>
+                    <a
+                        className="name"
+                        href='https://multifiber.app/'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >MULTIFIBER <Icon name='arrow-large' fill='white' size={30} />  </a>
                     <div className="tags"> <span>Web</span> <span>Telefonia</span> <span>Internet</span></div>
                 </div>
             </div>
             <div className="company company2">
                 <div className="content">
-                    <div className="name">GREENBONDMETER <Icon name='arrow-large' fill='white' size={30} /> </div>
-                    <div className="tags"><span>Web</span> <span>Fyntech</span> <span>BIO CONSERVATION</span></div>
+                    <a
+                        className="name"
+                        href='https://gbm.eco/'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >GREENBONDMETER <Icon name='arrow-large' fill='white' size={30} /> </a>
+                    <div className="tags"><span>Web</span> <span>Fyntech</span> <span>Bio conservation</span></div>
                 </div>
             </div>
             <div className="company company3">
                 <div className="content">
-                    <div className="name">SOOFT TECHNOLOGY<Icon name='arrow-large' fill='white' size={30} /></div>
+                    <a
+                        className="name"
+                        href='https://sooft.tech/'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >SOOFT TECHNOLOGY<Icon name='arrow-large' fill='white' size={30} /></a>
                     <div className="tags"><span>App</span> <span>Development agency</span></div>
                 </div>
             </div>
@@ -148,6 +140,7 @@ const Experience = () => {
                     font-weight: bold;
                     cursor: pointer;
                     z-index: 1000;
+                    text-decoration: none;
                 }
                 .experience__container .company .content .tags{
                     gap: .5em;
@@ -192,10 +185,10 @@ const Experience = () => {
                     .experience__container .company .content .name,
                     .experience__container .company .content .tags
                     { 
-                        font-size: 16px;
+                        font-size: 18px;
                     }
                     .experience__container .company .content .tags span{ 
-                        border: 2px solid #ffffff;
+                        border: 3px solid #ffffff;
                     }
                 }
 
