@@ -15,9 +15,9 @@ const ZanleSection = () => {
         <div className='zanle__container' id='zanle'>
             <div className='title__section'>
                 <div className='icon__box'>
-                    <Icon name='medical' size={50} fill={YELLOW} />
+                    <Icon name='medical' size={50} fill={BLACK} />
                 </div>
-                <Title value={translate("today.title")} color={YELLOW} />
+                <Title value={translate("today.title")} color={BLACK} />
             </div>
 
             <div className="section">

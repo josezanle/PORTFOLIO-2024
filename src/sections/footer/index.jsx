@@ -1,5 +1,5 @@
 import { Br } from "@/components/br";
-import { BLACK, LGBLACK, LGWHITE, VIOLET, WHITE, YELLOW } from "../../theme";
+import { BLACK, LGBLACK, YELLOW } from "../../theme";
 import { useTranslations } from "next-intl";
 
 const Footer = () => {
@@ -93,7 +93,7 @@ const Footer = () => {
           width: 1200px;
           height: 2px;
           margin: 6em 0;
-          background: ${LGWHITE}
+          background: ${YELLOW}
         }
 
         .footer__content .columns__container {
@@ -125,7 +125,7 @@ const Footer = () => {
         .footer__content .columns__container .box__footer .items {
           font-weight: 500;
           font-size: 17px;
-          color: ${LGWHITE};
+          color: ${YELLOW};
           text-align: center;
         }
 

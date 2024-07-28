@@ -1,12 +1,16 @@
 import React from 'react';
 import { Icon } from '@/components/icons';
-import { BLACK, VIOLET, WHITE, YELLOW } from '@/theme';
+import { BLACK, RED, VIOLET, WHITE, YELLOW } from '@/theme';
 import { useTranslations } from 'next-intl';
 import Title from '@/components/text/title';
 
+
+const multifiberImg = "https://images.pexels.com/photos/5745184/pexels-photo-5745184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+const gbmImg = "https://images.pexels.com/photos/3228762/pexels-photo-3228762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+const sooftImg = "https://images.pexels.com/photos/6340617/pexels-photo-6340617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
 const DATA = [
     {
-        img: "multifiber.png",
         name: "Multifiber",
         type: "Custom Development",
         year: "2023",
@@ -14,7 +18,6 @@ const DATA = [
         href: "https://multifiber.app/"
     },
     {
-        img: "gbm.png",
         name: "GreenBondMeter",
         type: "Fintech",
         year: "2022",
@@ -22,7 +25,6 @@ const DATA = [
         href: "https://gbm.eco/"
     },
     {
-        img: "sooft.png",
         name: "SOOFT Technology",
         type: "Software factory",
         year: "2021",
@@ -38,47 +40,38 @@ const Experience = () => {
         <div className='experience__container'>
             <div className='title__section' id='experience'>
                 <div className='icon__box'>
-                    <Icon name='medical' size={50} fill={YELLOW} />
+                    <Icon name='medical' size={50} fill={BLACK} />
                 </div>
-                <Title
-                    value={translate("experience.experienceTitle")}
-                    color={YELLOW}
-                />
+                <Title value={translate("experience.experienceTitle")} />
             </div>
 
             <div className="top__text">
                 <p className='describe'>
-                    <p className='italicText' style={{ marginRight: "8px" }}>{translate("experience.boldText1")}</p>
+                    <b className='italicText' style={{ marginRight: "8px" }}>{translate("experience.boldText1")}</b>
                     {translate("experience.text1")}
-                    <p className='italicText' style={{ margin: "0 8px" }}>{translate("experience.boldText2")}</p>
+                    <b className='italicText' style={{ margin: "0 8px" }}>{translate("experience.boldText2")}</b>
                     {translate("experience.text2")}
-                    <p className='italicText' style={{ marginLeft: "8px" }}>{translate("experience.boldText3")}</p>
+                    <b className='italicText' style={{ marginLeft: "8px" }}>{translate("experience.boldText3")}</b>
                 </p>
             </div>
 
-            <div className="row">
-                {
-                    DATA.map((item, i) => {
-                        return (
-                            <a
-                                className="item"
-                                key={i}
-                                href={item.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <div className="company">
-                                    <p className='company__name'>{item.name}</p>
-                                    <p className='company__type'>{item.type}</p>
-                                    <img className='flag' src={`https://flagcdn.com/20x15/${item.code}.png`} alt={item.code + " " + "img"} />
-                                </div>
-
-                                <img className='image' src={item.img} alt={item.img + "img"} />
-                                <p className='year'>{item.year}</p>
-                            </a>
-                        )
-                    })
-                }
+            <div className="company company1">
+                <div className="content">
+                    <div className="name">MULTIFIBER <Icon name='arrow-large' fill='white' size={30} />  </div>
+                    <div className="tags"> <span>Web</span> <span>Telefonia</span> <span>Internet</span></div>
+                </div>
+            </div>
+            <div className="company company2">
+                <div className="content">
+                    <div className="name">GREENBONDMETER <Icon name='arrow-large' fill='white' size={30} /> </div>
+                    <div className="tags"><span>Web</span> <span>Fyntech</span> <span>BIO CONSERVATION</span></div>
+                </div>
+            </div>
+            <div className="company company3">
+                <div className="content">
+                    <div className="name">SOOFT TECHNOLOGY<Icon name='arrow-large' fill='white' size={30} /></div>
+                    <div className="tags"><span>App</span> <span>Development agency</span></div>
+                </div>
             </div>
 
             <style jsx>{`
@@ -89,7 +82,8 @@ const Experience = () => {
                     flex-flow: column;
                     align-items: center;
                     justify-content: center;
-                    background: ${WHITE};
+                    padding: 4em 2em;
+                    background: ${YELLOW} ;
                 }
                 .experience__container .title__section {
                     width: 1200px;
@@ -115,103 +109,114 @@ const Experience = () => {
                 
                 .experience__container .top__text .describe .italicText{
                     font-style: italic;
-                    font-size: 30px
+                    font-size: 30px;
                 }
-                .experience__container .row{
+                .experience__container .company{
                     width: 1200px;
-                    display: flex;
-                    margin-top: 2em;
-                    flex-flow: column;
-                    gap: 2em;
+                    height: 75vh;
+                    margin: 2px 0;
+                    border-radius: 2em;
+                    background-size: cover;
+                    background-position: center;
+                    padding: 2em;
+                    position: relative;
                 }
-                .experience__container .row .item{
+                .experience__container .company::after{
+                    position: absolute;
+                    content: "";
                     width: 100%;
-                    height: 200px;
+                    height: 100%;
+                    top: 0;
+                    bottom: 0; 
+                    left: 0;
+                    right: 0;
+                    background: hsla(180, 2%, 12%, 0.5);
+                    border-radius: 2em;
+                }
+                .experience__container .company .content{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    z-index: 1000;
+                }
+                .experience__container .company .content .name{
                     display: flex;
                     align-items: center;
-                    padding: 0 2em;
+                    gap: .5em;
+                    color: white;
+                    font-size: 2em;
+                    font-weight: bold;
                     cursor: pointer;
-                    border-radius: .5em;
-                    border: 3px solid #f1f1f1;
-                    text-decoration: none;
-                    color: ${BLACK};
-                    background: ${YELLOW}
+                    z-index: 1000;
                 }
-                a:focus { color: ${BLACK} }
-                .experience__container .row .item:hover{ background: hsla(0, 0%, 95%, 0.5)}
-                .experience__container .row .item .company{
-                    display: flex;
-                    justify-content: center;
-                    flex-flow: column;
-                    width: 300px;
-                }
-                
-                .experience__container .row .item .company .company__name,
-                .experience__container .row .item .company .company__type
-                {
-                    width: 100%;
-                }
-                .experience__container .row .item .company .company__name
-                {
-                    font-size: 18px;
+                .experience__container .company .content .tags{
+                    gap: .5em;
+                    color: white;
+                    font-size: 2em;
                     font-weight: bold;
-                    color: ${BLACK};
+                    z-index: 1000;
                 }
-                .experience__container .row .item .company .company__type
-                {
-                    font-size: 13px;
-                    font-weight: 500;
+                .experience__container .company .content .tags span{
+                    border: 4px solid #ffffff;
+                    color: #ffffff;
+                    border-radius: 1em;
+                    padding: 5px 10px;
                 }
-                .experience__container .row .item .company .flag
-                {
-                    width: 20px;
-                    height: 15px;
-                    margin-top: .5em;
+                .experience__container .company1{
+                    background-image: url(${multifiberImg});
+                    margin-top: 2em;
                 }
-                .experience__container .row .item .image
-                {
-                    width: 200px;
-                    height: 200px;
-                    object-fit: contain;
-                    border-radius: 1em
+                .experience__container .company2{
+                    background-image: url(${gbmImg});
+                    margin: 2em 0;
                 }
-                .experience__container .row .item .year
-                {
-                    font-weight: bold;
-                    font-size: 40px;
-                    width: 100%;
-                    text-align: right
+                .experience__container .company3{
+                    background-image: url(${sooftImg});
                 }
 
                 @media(max-width: 1270px){
                     .experience__container { padding: 2em }
                     .experience__container .title__section,
-                    .experience__container .top__text,
-                    .experience__container .row
+                    .experience__container .top__text
                     {
                         width: 100%;
                     }
-
-                    .experience__container .row{ flex-flow: row}
-                    .experience__container .row .item{
-                        width: 270px;
-                        height: auto;
-                        align-items: flex-start;
-                        flex-flow: column;
-                        padding: 2em;
-                    }
-                    .experience__container .row .item .company{ width: 100%}
-                    .experience__container .row .item .year{ text-align: left }
                 }
 
                 @media( max-width: 1260px){
                     .experience__container .title__section .icon__box { display: none }
+                    .experience__container .company { width: 100%}
                 }
-                @media( max-width: 960px){
-                    .experience__container .row{ flex-flow: column; align-items: center}
+                
+                @media( max-width: 870px){
+                    .experience__container .company .content .name,
+                    .experience__container .company .content .tags
+                    { 
+                        font-size: 16px;
+                    }
+                    .experience__container .company .content .tags span{ 
+                        border: 2px solid #ffffff;
+                    }
                 }
+
                 @media( max-width: 750px){
-                    .experience__container .top__text .describe{ width: 100%}
+                    .experience__container .top__text .describe{ width: 100%};
+                    .experience__container .company{ 
+                        display: flex;
+                        flex-flow: column;
+                        height: 100%
+                    }
+                    .experience__container .company .content{ 
+                        display: flex;
+                        flex-flow: column;
+                        height: 100%
+                    }
+                }
+                @media( max-width: 480px){
+                    .experience__container .company .content .tags{ 
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
                 }
                 
             `}</style>

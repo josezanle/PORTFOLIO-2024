@@ -75,7 +75,7 @@ const Reference = () => {
                 font-size: 16px;
                 font-weight: bold;
                 border-radius: 100%;
-                border: 2px solid ${YELLOW};
+                border: 3px solid ${YELLOW};
                 color: ${YELLOW};
                 padding: 5px;
             }
