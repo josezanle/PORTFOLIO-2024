@@ -53,7 +53,7 @@ const Greeting = () => {
                 .greeting__container .text .good,
                 .greeting__container .text .day{
                     width: 100%;
-                    color: ${YELLOW};
+                    color: ${BLACK};
                     font-size: 120px;
                     text-transform: uppercase;
                     font-weight: bold;
