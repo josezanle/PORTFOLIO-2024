@@ -139,7 +139,7 @@ const Experience = () => {
                     font-size: 2em;
                     font-weight: bold;
                     cursor: pointer;
-                    z-index: 1000;
+                    z-index: 500;
                     text-decoration: none;
                 }
                 .experience__container .company .content .tags{
@@ -147,7 +147,7 @@ const Experience = () => {
                     color: white;
                     font-size: 2em;
                     font-weight: bold;
-                    z-index: 1000;
+                    z-index: 500;
                 }
                 .experience__container .company .content .tags span{
                     border: 4px solid #ffffff;

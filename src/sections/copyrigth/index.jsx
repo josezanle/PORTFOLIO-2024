@@ -1,4 +1,4 @@
-import { LGBLACK, LGWHITE, WHITE } from '@/theme'
+import { LGBLACK, WHITE, YELLOW } from '@/theme'
 import React from 'react'
 
 const CopyRigth = () => {
@@ -23,7 +23,7 @@ const CopyRigth = () => {
             }
 
             .CopyRigth__container .text{
-              color: ${LGWHITE} ;
+              color: ${YELLOW} ;
               text-align: center;
               font-size: 13px;
             }

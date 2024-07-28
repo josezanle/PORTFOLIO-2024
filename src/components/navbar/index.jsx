@@ -90,7 +90,7 @@ const Navbar = () => {
                     align-items: center;
                     justify-content: space-between;
                     position: fixed;
-                    z-index: 100;
+                    z-index: 10000;
                     background: transparent;
                     transition: background-color 0.3s ease-in-out;
                 }
