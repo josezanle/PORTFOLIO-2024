@@ -1,5 +1,5 @@
 import React from 'react'
-import { YELLOW } from '@/theme'
+import { BLACK, YELLOW } from '@/theme'
 import { useTranslations } from 'next-intl'
 import Title from '@/components/text/title'
 
@@ -12,7 +12,7 @@ const Phrase = () => {
         <div className='container__phrase'>
             <span className='content'>
                 <div className="box__title">
-                    <Title value={translate("phrase.phraseTitle")} color={YELLOW} />
+                    <Title value={translate("phrase.phraseTitle")} color={BLACK} />
                 </div>
 
                 <p className='single_text'>{translate("phrase.phraseText1")} 
