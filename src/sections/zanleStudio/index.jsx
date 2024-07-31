@@ -31,7 +31,7 @@ const ZanleSection = () => {
             <Br />
 
             <div className="description__container">
-                <p className='description'><b className='italicText'>Zanle Studio</b>, {translate("today.text1")}</p>
+                <p className='description'><b className='italicText'>Zanle Studio</b> {translate("today.text1")}</p>
 
                 <Br />
 

@@ -21,13 +21,11 @@ const CopyRigth = () => {
                 text-align: center;
                 font-size: 14px;
             }
-
             .CopyRigth__container .text{
-              color: ${YELLOW} ;
+              color: ${YELLOW};
               text-align: center;
               font-size: 13px;
             }
-
             `}
         </style>
       </div>

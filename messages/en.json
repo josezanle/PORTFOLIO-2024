@@ -20,20 +20,20 @@
         },
         "phrase": {
             "phraseTitle": "I want you to know:",
-            "phraseText1": "The appreciation I have for you, whether we worked together, formed a team, or you were my supervisor,",
-            "phraseText2": "is all thanks to you."
+            "phraseText1": "The appreciation I have for you, if we worked together, formed a team, or you were my supervisor,",
+            "phraseText2": "it's all thanks to you."
         },
         "experience": {
             "experienceTitle": "Experience",
             "boldText1": "Ok,",
-            "text1": "let's talk about some",
-            "boldText2": "experience working,",
-            "text2": "in some",
+            "text1": "let's talk about my",
+            "boldText2": "working experience",
+            "text2": "in",
             "boldText3": "STARTUPS."
         },
         "today": {
             "title": "TODAY",
-            "text1": "is my home, where I can show you that besides Frontend, Backend, and Databases, I can also design websites, contact clients, sell a service, or provide advice.",
+            "text1": "is my home, where I can show you that besides Frontend, Backend, and Databases, I can also design websites, contact clients, sell services, or give advise.",
             "text2": "For me,",
             "bold1": "it’s an adventure,",
             "text3": "the mere fact of being able to showcase my business to others is satisfying and fun.",
