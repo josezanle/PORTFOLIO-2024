@@ -41,13 +41,6 @@ const ZanleSection = () => {
                     {translate("today.text3")}
                 </p>
 
-                <Br />
-
-                <p className='description'>
-                    {translate("today.text4")}
-                    <b className='italicText' style={{ paddingLeft: "5px" }}>{translate("today.bold2")}</b>
-                </p>
-
             </div>
 
 

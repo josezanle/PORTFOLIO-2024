@@ -40,7 +40,7 @@ const Experience = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >MULTIFIBER <Icon name='arrow-large' fill='white' size={30} />  </a>
-                    <div className="tags"> <span>Web</span> <span>Telefonia</span> <span>Internet</span></div>
+                    <div className="tags"> <span>Web</span> <span>Telecom</span> <span>Internet</span></div>
                 </div>
             </div>
             <div className="company company2">
