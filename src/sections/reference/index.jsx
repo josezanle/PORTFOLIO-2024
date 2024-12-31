@@ -23,6 +23,12 @@ const Reference = () => {
             <div className="single__text">JWT</div>
             <div className="single__text">JEST</div>
             <div className="single__text">CI CD</div>
+            <div className="single__text">PYTHON</div>
+            <div className="single__text">DJANGO REST FRAMEWORK</div>
+            <div className="single__text">REDIS</div>
+            <div className="single__text">CELERY</div>
+            <div className="single__text">POSTGRES</div>
+            <div className="single__text">PYTEST</div>
             
             <style jsx>
                 {`
