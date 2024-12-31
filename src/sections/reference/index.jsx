@@ -29,6 +29,7 @@ const Reference = () => {
             <div className="single__text">CELERY</div>
             <div className="single__text">POSTGRES</div>
             <div className="single__text">PYTEST</div>
+            <div className="single__text">DOCKER</div>
             
             <style jsx>
                 {`
