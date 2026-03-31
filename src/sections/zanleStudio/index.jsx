@@ -23,7 +23,7 @@ const ZanleSection = () => {
             <div className="section">
                 <div className="box">
                     <div className="freelance__title">Freelance</div>
-                    <a href='https://zanle.studio/' target='_blank' className="content"></a>
+                    <a href='https://www.zanle-studio.com/' target='_blank' className="content"></a>
                 </div>
             </div>
 
