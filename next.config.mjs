@@ -1,11 +1,14 @@
-
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    // Exportación estática (carpeta out/) para servirla desde Cloudflare
+    output: 'export',
     images: {
+        // El optimizador de imágenes necesita un servidor; la exportación estática no lo admite
+        unoptimized: true,
         remotePatterns: [
             {
                 protocol: 'https',
@@ -14,7 +17,7 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'https://images.pexels.com',
+                hostname: 'images.pexels.com',
                 port: '',
             },
         ],

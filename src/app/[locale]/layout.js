@@ -2,7 +2,9 @@ import { Catamaran } from "next/font/google";
 import "./globals.css";
 
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+
+import { locales } from "@/i18n";
 
 import { ThemeProvider } from "@/contexts/providers/themeProvider";
 
@@ -26,7 +28,14 @@ export const metadata = {
   },
 };
 
+// Sin middleware, cada idioma se genera como página estática en el build
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({ children, params: { locale } }) {
+  unstable_setRequestLocale(locale);
+
   // Proporcionar todos los mensajes al lado del cliente
   const messages = await getMessages();
 
